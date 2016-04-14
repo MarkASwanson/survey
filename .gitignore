@@ -1,0 +1,8 @@
+.DS_Store
+log/
+data/
+vendor/
+build/noTrack/
+*.sublime*
+.sass-cache/
+public/uploads/

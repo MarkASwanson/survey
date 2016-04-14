@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# The following rule tells Apache that if the requested filename
+# exists, simply serve it.
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -l [OR]
+RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -d
+RewriteRule ^(/?)(.*)$ /public/$2 [NC,L]
+
+# else, server the public/ directory
+RewriteCond %{REQUEST_URI} !^/public
+RewriteRule ^(/?)(.*) /public/ [NC,L]

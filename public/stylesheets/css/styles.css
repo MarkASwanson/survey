@@ -1,0 +1,3364 @@
+@charset "UTF-8";
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* line 11, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 30, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/* line 41, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 50, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+[hidden] {
+  display: none; }
+
+/* line 64, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 74, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* line 108, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 117, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 125, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/* line 134, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/* line 142, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/* line 152, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/* line 161, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/* line 173, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/* line 181, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/* line 189, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 197, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 205, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 209, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 221, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 229, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 241, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 253, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/* line 264, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 275, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+/* line 289, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/* line 301, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/* line 314, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 331, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button[disabled] {
+  cursor: default; }
+
+/* line 340, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+/* line 352, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 364, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 373, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 384, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 397, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@media (max-width: 1024px) {
+  /* line 20, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_responsive-utilities.scss */
+  .desktop-andLarger {
+    display: none !important; } }
+
+@media (max-width: 759px) {
+  /* line 22, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_responsive-utilities.scss */
+  .tablet-andLarger {
+    display: none !important; } }
+
+@media (min-width: 1025px) {
+  /* line 24, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_responsive-utilities.scss */
+  .tablet-andSmaller {
+    display: none !important; } }
+
+@media (min-width: 760px) {
+  /* line 26, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_responsive-utilities.scss */
+  .phone-andSmaller {
+    display: none !important; } }
+
+@-webkit-keyframes iconSpinningAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes iconSpinningAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes iconSpinningAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@font-face {
+  font-family: "Icons";
+  src: url("../../fonts/icons/icons.eot");
+  src: url("../../fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/icons/icons.woff") format("woff"), url("../../fonts/icons/icons.ttf") format("truetype"), url("../../fonts/icons/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 102, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+[class*='icon-'] {
+  font-size: 16px;
+  font-family: 'Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+  font-size: 16px; }
+  /* line 104, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+  [class*='icon-']:after {
+    line-height: inherit; }
+
+/* line 109, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-size-double {
+  font-size: 32px; }
+
+/* line 113, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-add:after {
+  content: ""; }
+
+/* line 114, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-archive:after {
+  content: ""; }
+
+/* line 115, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-cancel:after {
+  content: ""; }
+
+/* line 116, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-chevron-down:after {
+  content: ""; }
+
+/* line 117, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-chevron-left:after {
+  content: ""; }
+
+/* line 118, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-chevron-right:after {
+  content: ""; }
+
+/* line 119, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-chevron-up:after {
+  content: ""; }
+
+/* line 120, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-checked:after {
+  content: ""; }
+
+/* line 121, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-checkmark:after {
+  content: ""; }
+
+/* line 122, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-close:after {
+  content: ""; }
+
+/* line 123, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-doubleAngle-down:after {
+  content: ""; }
+
+/* line 124, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-doubleAngle-right:after {
+  content: ""; }
+
+/* line 125, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-edit:after {
+  content: ""; }
+
+/* line 126, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-facebook:after {
+  content: ""; }
+
+/* line 127, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-googlePlus:after {
+  content: ""; }
+
+/* line 128, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-grid:after {
+  content: ""; }
+
+/* line 129, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-info:after {
+  content: ""; }
+
+/* line 130, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-loading:after {
+  content: ""; }
+
+/* line 131, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-menu:after {
+  content: ""; }
+
+/* line 132, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-pause:after {
+  content: ""; }
+
+/* line 133, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-play:after {
+  content: ""; }
+
+/* line 134, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-remove:after {
+  content: ""; }
+
+/* line 135, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-shoppingCart:after {
+  content: ""; }
+
+/* line 136, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-sound:after {
+  content: ""; }
+
+/* line 137, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-spotify:after {
+  content: ""; }
+
+/* line 138, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-subscribe:after {
+  content: ""; }
+
+/* line 139, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-twitter:after {
+  content: ""; }
+
+/* line 140, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-trash:after {
+  content: ""; }
+
+/* line 141, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-unchecked:after {
+  content: ""; }
+
+/* line 145, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-loading:after {
+  -webkit-animation: iconSpinningAnimation 2s infinite linear;
+  -moz-animation: iconSpinningAnimation 2s infinite linear;
+  animation: iconSpinningAnimation 2s infinite linear; }
+
+/* line 147, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.icon-info:after {
+  background: #5bc0de;
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+  color: white;
+  cursor: help;
+  border-radius: 50%; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+.fade-enter {
+  opacity: 0.01; }
+
+/* line 5, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+/* line 10, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+.fade-leave {
+  opacity: 1; }
+
+/* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+.fade-leave.fade-leave-active {
+  opacity: 0.01;
+  transition: opacity 500ms ease-in; }
+
+/* line 63, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.row {
+  margin-left: -10px;
+  margin-right: -10px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 65, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-1 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 65, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-1 {
+      float: left;
+      width: 8.33333%; } }
+  @media (min-width: 1025px) {
+    /* line 65, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-1 {
+      margin-left: 0%; } }
+
+/* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-2 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-2 {
+      float: left;
+      width: 16.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-2 {
+      margin-left: 0%; } }
+
+/* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-3 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-3 {
+      float: left;
+      width: 25%; } }
+  @media (min-width: 1025px) {
+    /* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-3 {
+      margin-left: 0%; } }
+
+/* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-4 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-4 {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 1025px) {
+    /* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-4 {
+      margin-left: 0%; } }
+
+/* line 69, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-5 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 69, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-5 {
+      float: left;
+      width: 41.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 69, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-5 {
+      margin-left: 0%; } }
+
+/* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-6 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-6 {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 1025px) {
+    /* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-6 {
+      margin-left: 0%; } }
+
+/* line 71, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-7 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 71, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-7 {
+      float: left;
+      width: 58.33333%; } }
+  @media (min-width: 1025px) {
+    /* line 71, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-7 {
+      margin-left: 0%; } }
+
+/* line 72, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-8 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 72, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-8 {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 72, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-8 {
+      margin-left: 0%; } }
+
+/* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-9 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-9 {
+      float: left;
+      width: 75%; } }
+  @media (min-width: 1025px) {
+    /* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-9 {
+      margin-left: 0%; } }
+
+/* line 74, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-10 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 74, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-10 {
+      float: left;
+      width: 83.33333%; } }
+  @media (min-width: 1025px) {
+    /* line 74, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-10 {
+      margin-left: 0%; } }
+
+/* line 75, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-11 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 75, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-11 {
+      float: left;
+      width: 91.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 75, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-11 {
+      margin-left: 0%; } }
+
+/* line 76, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-desktop-12 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 1025px) {
+    /* line 76, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-12 {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 1025px) {
+    /* line 76, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-desktop-12 {
+      margin-left: 0%; } }
+
+/* line 78, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-1 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 78, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-1 {
+      float: left;
+      width: 8.33333%; } }
+  @media (min-width: 760px) {
+    /* line 78, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-1 {
+      margin-left: 0%; } }
+
+/* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-2 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-2 {
+      float: left;
+      width: 16.66667%; } }
+  @media (min-width: 760px) {
+    /* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-2 {
+      margin-left: 0%; } }
+
+/* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-3 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-3 {
+      float: left;
+      width: 25%; } }
+  @media (min-width: 760px) {
+    /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-3 {
+      margin-left: 0%; } }
+
+/* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-4 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-4 {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 760px) {
+    /* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-4 {
+      margin-left: 0%; } }
+
+/* line 82, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-5 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 82, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-5 {
+      float: left;
+      width: 41.66667%; } }
+  @media (min-width: 760px) {
+    /* line 82, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-5 {
+      margin-left: 0%; } }
+
+/* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-6 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-6 {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 760px) {
+    /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-6 {
+      margin-left: 0%; } }
+
+/* line 84, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-7 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 84, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-7 {
+      float: left;
+      width: 58.33333%; } }
+  @media (min-width: 760px) {
+    /* line 84, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-7 {
+      margin-left: 0%; } }
+
+/* line 85, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-8 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 85, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-8 {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 760px) {
+    /* line 85, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-8 {
+      margin-left: 0%; } }
+
+/* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-9 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-9 {
+      float: left;
+      width: 75%; } }
+  @media (min-width: 760px) {
+    /* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-9 {
+      margin-left: 0%; } }
+
+/* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-10 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-10 {
+      float: left;
+      width: 83.33333%; } }
+  @media (min-width: 760px) {
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-10 {
+      margin-left: 0%; } }
+
+/* line 88, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-11 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 88, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-11 {
+      float: left;
+      width: 91.66667%; } }
+  @media (min-width: 760px) {
+    /* line 88, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-11 {
+      margin-left: 0%; } }
+
+/* line 89, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-tablet-12 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 760px) {
+    /* line 89, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-12 {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 760px) {
+    /* line 89, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-tablet-12 {
+      margin-left: 0%; } }
+
+/* line 91, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-1 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 91, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-1 {
+      float: left;
+      width: 8.33333%; } }
+  @media (min-width: 760px) {
+    /* line 91, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-1 {
+      margin-left: 0%; } }
+
+/* line 92, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-2 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 92, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-2 {
+      float: left;
+      width: 16.66667%; } }
+  @media (min-width: 760px) {
+    /* line 92, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-2 {
+      margin-left: 0%; } }
+
+/* line 93, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-3 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 93, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-3 {
+      float: left;
+      width: 25%; } }
+  @media (min-width: 760px) {
+    /* line 93, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-3 {
+      margin-left: 0%; } }
+
+/* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-4 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-4 {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 760px) {
+    /* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-4 {
+      margin-left: 0%; } }
+
+/* line 95, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-5 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 95, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-5 {
+      float: left;
+      width: 41.66667%; } }
+  @media (min-width: 760px) {
+    /* line 95, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-5 {
+      margin-left: 0%; } }
+
+/* line 96, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-6 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 96, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-6 {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 760px) {
+    /* line 96, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-6 {
+      margin-left: 0%; } }
+
+/* line 97, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-7 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 97, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-7 {
+      float: left;
+      width: 58.33333%; } }
+  @media (min-width: 760px) {
+    /* line 97, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-7 {
+      margin-left: 0%; } }
+
+/* line 98, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-8 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 98, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-8 {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 760px) {
+    /* line 98, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-8 {
+      margin-left: 0%; } }
+
+/* line 99, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-9 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 99, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-9 {
+      float: left;
+      width: 75%; } }
+  @media (min-width: 760px) {
+    /* line 99, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-9 {
+      margin-left: 0%; } }
+
+/* line 100, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-10 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 100, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-10 {
+      float: left;
+      width: 83.33333%; } }
+  @media (min-width: 760px) {
+    /* line 100, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-10 {
+      margin-left: 0%; } }
+
+/* line 101, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-11 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 101, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-11 {
+      float: left;
+      width: 91.66667%; } }
+  @media (min-width: 760px) {
+    /* line 101, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-11 {
+      margin-left: 0%; } }
+
+/* line 102, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+.column-phone-12 {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+  @media (min-width: 0px) {
+    /* line 102, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-12 {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 760px) {
+    /* line 102, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
+    .column-phone-12 {
+      margin-left: 0%; } }
+
+/* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+.alert.positive {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.positive hr {
+    border-top-color: #c9e2b3; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.positive a {
+    color: #356635; }
+/* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+.alert.neutral {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #c09853; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.neutral hr {
+    border-top-color: #f7e1b5; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.neutral a {
+    color: #a47e3c; }
+/* line 17, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+.alert.negative {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #b94a48; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.negative hr {
+    border-top-color: #e4b9c0; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert.negative a {
+    color: #953b39; }
+
+/* line 22, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #c09853; }
+  /* line 27, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert > p,
+  .alert > ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px; }
+  /* line 33, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert > p + p {
+    margin-top: 5px; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert hr {
+    border-top-color: #f7e1b5; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+  .alert a {
+    color: #a47e3c; }
+
+/* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+.badge.positive {
+  background: #5cb85c;
+  color: #ffffff; }
+/* line 13, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+.badge.neutral {
+  background: #ed9c28;
+  color: #ffffff; }
+/* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+.badge.negative {
+  background: #d9534f;
+  color: #ffffff; }
+
+/* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+.badge {
+  background: gray;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 6px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-width: 10px;
+  padding: 3px 7px;
+  display: inline-block;
+  font-weight: bold;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-align: center;
+  line-height: normal;
+  font-style: normal; }
+  /* line 34, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+  .badge:empty {
+    display: none; }
+
+/* line 39, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_badges.scss */
+a:not(:hover) > .badge {
+  opacity: 0.5; }
+
+/* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+.dropdown {
+  position: relative; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  .dropdown > :not(a):not([class^='dropdown-trigger']) {
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+    background: #eeeeee;
+    border: 1px solid #d5d5d5;
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1100;
+    position: absolute;
+    margin: 0px; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  .dropdown:not(:hover) > :not(a):not([class^='dropdown-trigger']) {
+    display: none; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  .dropdown > :not(a):not([class^='dropdown-trigger']) {
+    right: auto;
+    left: 0px;
+    top: auto;
+    text-align: left; }
+  /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+  .dropdown > a:after,
+  .dropdown > .dropdown-trigger:after {
+    font-size: 16px;
+    font-family: 'Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 8px;
+    content: "";
+    margin-left: 10px; }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+.dropdown-type-horizontal.dropdown > :not(a):not([class^='dropdown-trigger']) {
+  top: 0px;
+  left: 100%;
+  right: auto;
+  text-align: left; }
+/* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.dropdown-type-horizontal.dropdown > a:after,
+.dropdown-type-horizontal.dropdown > .dropdown-trigger:after {
+  font-size: 16px;
+  font-family: 'Icons';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  vertical-align: middle;
+  font-size: 8px;
+  content: "";
+  margin-left: 10px; }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+.dropdown-type-vertical-right.dropdown > :not(a):not([class^='dropdown-trigger']) {
+  left: auto;
+  right: 0px;
+  text-align: right; }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+.dropdown-type-vertical-left.dropdown > :not(a):not([class^='dropdown-trigger']) {
+  right: auto;
+  left: 0px;
+  top: auto;
+  text-align: left; }
+
+/* line 99, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+.dropdown-noArrow > a:after,
+.dropdown-noArrow > .dropdown-trigger:after {
+  display: none; }
+
+/* line 124, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+ul.nav {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  letter-spacing: 0px;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  ul.nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 128, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > li {
+    font-size: 16px; }
+    /* line 130, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > li > a {
+      padding: 5px 10px;
+      position: relative;
+      display: block;
+      border-radius: 4px; }
+    /* line 136, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > li.active > a {
+      cursor: default; }
+  /* line 138, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .nav-header {
+    padding: 5px 10px;
+    font-size: 14px;
+    text-align: left; }
+  /* line 143, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .nav-divider {
+    height: 1px;
+    margin: 10px 0px;
+    overflow: hidden; }
+  /* line 150, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > li > a > img {
+    max-width: none; }
+  /* line 151, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .dropdown > ul.nav {
+    padding: 5px 0px;
+    min-width: 200px; }
+    /* line 115, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > .dropdown > ul.nav > li > a {
+      text-align: left; }
+    /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > .dropdown > ul.nav > li {
+      display: block; }
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+    ul.nav > .dropdown > ul.nav .dropdown > :not(a):not([class^='dropdown-trigger']) {
+      top: 0px;
+      left: 100%;
+      right: auto;
+      text-align: left; }
+    /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+    ul.nav > .dropdown > ul.nav .dropdown > a:after,
+    ul.nav > .dropdown > ul.nav .dropdown > .dropdown-trigger:after {
+      font-size: 16px;
+      font-family: 'Icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: middle;
+      font-size: 8px;
+      content: "";
+      margin-left: 10px; }
+    /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > .dropdown > ul.nav .dropdown > a:after,
+    ul.nav > .dropdown > ul.nav .dropdown > .dropdown-trigger:after {
+      float: right; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  ul.nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  ul.nav > li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1; }
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+    ul.nav > li > a {
+      text-align: center; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  ul.nav > .dropdown > :not(a):not([class^='dropdown-trigger']) {
+    right: auto;
+    left: 0px;
+    top: auto;
+    text-align: left; }
+  /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+  ul.nav > .dropdown > a:after,
+  ul.nav > .dropdown > .dropdown-trigger:after {
+    font-size: 16px;
+    font-family: 'Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 8px;
+    content: "";
+    margin-left: 10px; }
+  /* line 34, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .dropdown > a:after,
+  ul.nav > .dropdown > .dropdown-trigger:after {
+    float: none; }
+  /* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > li > a {
+    color: #333333; }
+    /* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > li > a:hover {
+      background: #333333;
+      color: #eeeeee; }
+  /* line 76, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > li.active > a {
+    background: #333333;
+    color: #eeeeee; }
+    /* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    ul.nav > li.active > a:hover {
+      background: #333333;
+      color: #eeeeee; }
+  /* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .nav-header {
+    color: #b3b3b3; }
+  /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  ul.nav > .nav-divider {
+    background-color: #b3b3b3; }
+
+/* line 159, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+.nav.nav-type-horizontal {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  .nav.nav-type-horizontal:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  .nav.nav-type-horizontal > li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1; }
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+    .nav.nav-type-horizontal > li > a {
+      text-align: center; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  .nav.nav-type-horizontal > .dropdown > :not(a):not([class^='dropdown-trigger']) {
+    right: auto;
+    left: 0px;
+    top: auto;
+    text-align: left; }
+  /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+  .nav.nav-type-horizontal > .dropdown > a:after,
+  .nav.nav-type-horizontal > .dropdown > .dropdown-trigger:after {
+    font-size: 16px;
+    font-family: 'Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 8px;
+    content: "";
+    margin-left: 10px; }
+  /* line 34, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .nav.nav-type-horizontal > .dropdown > a:after,
+  .nav.nav-type-horizontal > .dropdown > .dropdown-trigger:after {
+    float: none; }
+
+/* line 160, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+.nav.nav-type-vertical {
+  padding: 5px 0px;
+  min-width: 200px; }
+  /* line 115, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .nav.nav-type-vertical > li > a {
+    text-align: left; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .nav.nav-type-vertical > li {
+    display: block; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+  .nav.nav-type-vertical .dropdown > :not(a):not([class^='dropdown-trigger']) {
+    top: 0px;
+    left: 100%;
+    right: auto;
+    text-align: left; }
+  /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+  .nav.nav-type-vertical .dropdown > a:after,
+  .nav.nav-type-vertical .dropdown > .dropdown-trigger:after {
+    font-size: 16px;
+    font-family: 'Icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+    font-size: 8px;
+    content: "";
+    margin-left: 10px; }
+  /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .nav.nav-type-vertical .dropdown > a:after,
+  .nav.nav-type-vertical .dropdown > .dropdown-trigger:after {
+    float: right; }
+
+/* line 163, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+.navbar > nav {
+  display: inline-block; }
+  /* line 165, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .navbar > nav > ul.nav > li > a {
+    padding-top: 13px;
+    padding-bottom: 13px; }
+
+/* line 49, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+.navbar {
+  height: 50px;
+  margin-bottom: 22px;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  margin-bottom: 0px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  position: relative;
+  z-index: 1000;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #d5d5d5;
+  color: #333333; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  .navbar:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 60, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar > h1 {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 18px;
+    line-height: 22px; }
+  /* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar > p {
+    padding: 15px;
+    margin: 0px; }
+  /* line 71, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar img {
+    border: none; }
+  /* line 33, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar > h1, .navbar > h1 > a {
+    color: #333333; }
+  /* line 34, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar > p {
+    color: #333333; }
+  /* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .navbar > ul.nav > li > a {
+    color: #333333; }
+    /* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    .navbar > ul.nav > li > a:hover {
+      background: #333333;
+      color: #eeeeee; }
+  /* line 76, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .navbar > ul.nav > li.active > a {
+    background: #333333;
+    color: #eeeeee; }
+    /* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+    .navbar > ul.nav > li.active > a:hover {
+      background: #333333;
+      color: #eeeeee; }
+  /* line 86, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .navbar > ul.nav > .nav-header {
+    color: #b3b3b3; }
+  /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navs.scss */
+  .navbar > ul.nav > .nav-divider {
+    background-color: #b3b3b3; }
+
+@media (max-width: 759px) {
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+  .navbar-autoResponsive-phoneAndSmaller > nav {
+    position: relative;
+    top: 11px; }
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav > :not(a):not([class^='dropdown-trigger']) {
+      box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+      background: #eeeeee;
+      border: 1px solid #d5d5d5;
+      border-radius: 4px;
+      padding: 10px;
+      z-index: 1100;
+      position: absolute;
+      margin: 0px; }
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav:not(:hover) > :not(a):not([class^='dropdown-trigger']) {
+      display: none; }
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav > :not(a):not([class^='dropdown-trigger']) {
+      right: auto;
+      left: 0px;
+      top: auto;
+      text-align: left; }
+    /* line 80, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav > a:after,
+    .navbar-autoResponsive-phoneAndSmaller > nav > .dropdown-trigger:after {
+      font-size: 16px;
+      font-family: 'Icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: middle;
+      font-size: 8px;
+      content: "";
+      margin-left: 10px; }
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_dropdowns.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav > :not(a):not([class^='dropdown-trigger']) {
+      left: auto;
+      right: 0px;
+      text-align: right; }
+    /* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_navbar.scss */
+    .navbar-autoResponsive-phoneAndSmaller > nav .icon {
+      color: #333333; }
+      /* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+      .navbar-autoResponsive-phoneAndSmaller > nav .icon:after {
+        font-size: 16px;
+        font-family: 'Icons';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        vertical-align: middle;
+        font-size: 32px;
+        content: ""; } }
+
+/* line 23, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+.well {
+  background: #d5d5d5;
+  border-color: 1px solid #d5d5d5;
+  color: #333333; }
+  /* line 25, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+  .well.positive {
+    background: #dff0d8;
+    border-color: 1px solid #d6e9c6;
+    color: #468847; }
+  /* line 26, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+  .well.neutral {
+    background: #fcf8e3;
+    border-color: 1px solid #faebcc;
+    color: #c09853; }
+  /* line 27, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+  .well.negative {
+    background: #f2dede;
+    border-color: 1px solid #ebccd1;
+    color: #b94a48; }
+
+/* line 32, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+.well {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px; }
+  /* line 36, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+  .well:last-child {
+    margin-bottom: 0px; }
+
+/* line 41, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_wells.scss */
+.well hr {
+  border-top-color: #eeeeee; }
+
+/* line 56, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+.panel {
+  margin-bottom: 10px;
+  background-color: #eeeeee;
+  border-radius: 4px;
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+  padding: 0px;
+  color: #333333;
+  border: 1px solid #d5d5d5; }
+  /* line 8, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel:not(:first-child) {
+    margin-top: 10px; }
+  /* line 9, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > * {
+    padding: 10px; }
+    /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+    .panel > *:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 13, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > h1, .panel > h2, .panel > h3, .panel > h4, .panel > h5, .panel > h6 {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin: 0px;
+    padding: 10px 10px 10px 15px;
+    font-size: 18px;
+    text-align: left; }
+  /* line 20, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > .panel-footer {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    padding: 10px 15px;
+    border: none;
+    margin: 0px; }
+    /* line 26, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+    .panel > .panel-footer.pre {
+      max-height: none;
+      overflow-y: auto; }
+  /* line 40, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > h1, .panel > h2, .panel > h3, .panel > h4, .panel > h5, .panel > h6 {
+    color: #BE640B;
+    background-color: #d5d5d5;
+    border-bottom: 1px solid #d5d5d5; }
+  /* line 45, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel .panel-footer {
+    color: #333333;
+    background-color: #d5d5d5;
+    border-top: 1px solid #d5d5d5; }
+
+/* line 31, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.btn.positive, button.positive {
+  color: #ffffff;
+  background: #5cb85c;
+  border-color: #4cae4c; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.positive:hover, button.positive:hover, .btn.positive:focus
+  .btn.positive:active, button.positive:focus
+  .btn.positive:active, .btn.positive:focus
+  button.positive:active, button.positive:focus
+  button.positive:active {
+    color: #ffffff;
+    background-color: #78c478;
+    border-color: #398439; }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.positive[disabled], button.positive[disabled], .btn.positive[disabled]:hover, button.positive[disabled]:hover, .btn.positive[disabled]:focus, button.positive[disabled]:focus, .btn.positive[disabled]:active, button.positive[disabled]:active {
+    background-color: #5cb85c;
+    border-color: #4cae4c; }
+/* line 32, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.btn.neutral, button.neutral {
+  color: #ffffff;
+  background: #ed9c28;
+  border-color: #e89113; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.neutral:hover, button.neutral:hover, .btn.neutral:focus
+  .btn.neutral:active, button.neutral:focus
+  .btn.neutral:active, .btn.neutral:focus
+  button.neutral:active, button.neutral:focus
+  button.neutral:active {
+    color: #ffffff;
+    background-color: #f0ad4e;
+    border-color: #b06d0f; }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.neutral[disabled], button.neutral[disabled], .btn.neutral[disabled]:hover, button.neutral[disabled]:hover, .btn.neutral[disabled]:focus, button.neutral[disabled]:focus, .btn.neutral[disabled]:active, button.neutral[disabled]:active {
+    background-color: #ed9c28;
+    border-color: #e89113; }
+/* line 33, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.btn.negative, button.negative {
+  color: #ffffff;
+  background: #d9534f;
+  border-color: #d43f3a; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.negative:hover, button.negative:hover, .btn.negative:focus
+  .btn.negative:active, button.negative:focus
+  .btn.negative:active, .btn.negative:focus
+  button.negative:active, button.negative:focus
+  button.negative:active {
+    color: #ffffff;
+    background-color: #e07471;
+    border-color: #ac2925; }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn.negative[disabled], button.negative[disabled], .btn.negative[disabled]:hover, button.negative[disabled]:hover, .btn.negative[disabled]:focus, button.negative[disabled]:focus, .btn.negative[disabled]:active, button.negative[disabled]:active {
+    background-color: #d9534f;
+    border-color: #d43f3a; }
+
+/* line 47, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.btn, button {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  line-height: 22px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  color: #eeeeee;
+  background: #BE640B;
+  border-color: #d5d5d5;
+  font-size: 16px; }
+  /* line 59, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn:hover, button:hover, .btn:focus, button:focus {
+    text-decoration: none; }
+  /* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn:active, button:active {
+    outline: 0px;
+    background-image: none;
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.125); }
+  /* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn[disabled], button[disabled] {
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    cursor: not-allowed;
+    box-shadow: none;
+    pointer-events: none; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn:hover, button:hover, .btn:focus
+  .btn:active, button:focus
+  .btn:active, .btn:focus
+  button:active, button:focus
+  button:active {
+    color: #eeeeee;
+    background-color: #e5780d;
+    border-color: #b6b6b6; }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .btn[disabled], button[disabled], .btn[disabled]:hover, button[disabled]:hover, .btn[disabled]:focus, button[disabled]:focus, .btn[disabled]:active, button[disabled]:active {
+    background-color: #BE640B;
+    border-color: #d5d5d5; }
+
+/* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.new.btn, button.new {
+  color: #ffffff;
+  background: #5cb85c;
+  border-color: #4cae4c; }
+  /* line 6, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .new.btn:hover, button.new:hover, .new.btn:focus
+  .new.btn:active, button.new:focus
+  .new.btn:active, .new.btn:focus
+  button.new:active, button.new:focus
+  button.new:active {
+    color: #ffffff;
+    background-color: #78c478;
+    border-color: #398439; }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .new.btn[disabled], button.new[disabled], .new.btn[disabled]:hover, button.new[disabled]:hover, .new.btn[disabled]:focus, button.new[disabled]:focus, .new.btn[disabled]:active, button.new[disabled]:active {
+    background-color: #5cb85c;
+    border-color: #4cae4c; }
+
+/* line 84, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+h1 .btn, h1 button,
+h1 button, h2 .btn, h2 button,
+h2 button {
+  font-size: 16px;
+  float: right;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* line 92, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+small .btn, small button {
+  font-size: 14px;
+  padding: 2px 10px; }
+
+/* line 99, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.social.btn, button.social, .facebook.btn, button.facebook {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05) 49%, rgba(0, 0, 0, 0.05) 51%, rgba(0, 0, 0, 0.1));
+  font-family: 'Lucida Grande', Tahoma, sans-serif;
+  position: relative;
+  font-weight: bold;
+  border-left: solid 1px rgba(0, 0, 0, 0.2);
+  padding-left: 2.6em;
+  border-color: #acacac;
+  text-shadow: rgba(0, 0, 0, 0.49804) 0px 1px 0; }
+  /* line 108, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .social.btn:before, button.social:before, .facebook.btn:before, button.facebook:before {
+    position: absolute;
+    border-right: solid 1px rgba(255, 255, 255, 0.2);
+    top: 0px;
+    bottom: 0px;
+    left: 0.5em;
+    padding-right: 0.2em;
+    padding-top: 0.4em; }
+    /* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_icons.scss */
+    .social.btn:before:after, button.social:before:after, .facebook.btn:before:after, button.facebook:before:after {
+      font-size: 16px;
+      font-family: 'Icons';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      vertical-align: middle;
+      font-size: 16px;
+      content: ""; }
+  /* line 118, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .social.btn:hover, button.social:hover, .facebook.btn:hover, button.facebook:hover, .social.btn:focus, button.social:focus, .facebook.btn:focus, button.facebook:focus {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+    background-image: linear-gradient(rgba(255, 255, 255, 0.15) 49%, rgba(0, 0, 0, 0.1) 51%, rgba(0, 0, 0, 0.15));
+    background-color: #4863AE;
+    color: #ffffff;
+    border-color: #acacac; }
+  /* line 124, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .social.btn:active, button.social:active, .facebook.btn:active, button.facebook:active {
+    background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+    background-image: linear-gradient(bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 30%, transparent 50%, rgba(0, 0, 0, 0.1));
+    background-color: #4863AE;
+    border-color: #acacac; }
+
+/* line 131, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+.facebook.btn, button.facebook {
+  background-color: #4863AE;
+  color: #ffffff; }
+  /* line 135, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .facebook.btn:hover, button.facebook:hover, .facebook.btn:focus, button.facebook:focus {
+    background-color: #4863AE;
+    border-color: #cccccc; }
+  /* line 139, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
+  .facebook.btn:active, button.facebook:active {
+    background-color: #4863AE;
+    border-color: #cccccc; }
+
+/* line 77, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+form {
+  text-align: left; }
+  /* line 79, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form > div {
+    margin-bottom: 15px; }
+    /* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form > div > textarea,
+    form > div > select,
+    form > div > input:not([type=checkbox]):not(input[type=radio]) {
+      display: block;
+      width: 100%; }
+  /* line 88, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form label {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    width: auto; }
+    /* line 93, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form label.required:after {
+      content: '*';
+      font-size: 18px;
+      color: #d9534f;
+      position: absolute;
+      top: 2px;
+      right: 3px; }
+  /* line 106, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form textarea:only-child,
+  form select:only-child,
+  form input:not([type=checkbox]):not(input[type=radio]):only-child {
+    border: none;
+    border-bottom: dashed 1px #d5d5d5;
+    outline: none; }
+    /* line 110, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form textarea:only-child:focus,
+    form select:only-child:focus,
+    form input:not([type=checkbox]):not(input[type=radio]):only-child:focus {
+      border-bottom-color: #333333; }
+  /* line 115, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form textarea {
+    height: auto; }
+  /* line 116, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form input[type=checkbox], form input[type=radio] {
+    position: relative;
+    top: -1px; }
+  /* line 120, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form input[type=submit],
+  form input[type=file] {
+    padding-top: 5px; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  form > div {
+    margin-left: -10px;
+    margin-right: -10px;
+    padding-right: 10px;
+    padding-left: 10px; }
+    /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+    form > div:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form > div > label:first-child {
+      position: relative;
+      display: block;
+      min-height: 1px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-top: 7px;
+      text-align: right; }
+      @media (min-width: 1025px) {
+        /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > label:first-child {
+          float: left;
+          width: 16.66667%; } }
+      @media (min-width: 1025px) {
+        /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > label:first-child {
+          margin-left: 0%; } }
+    /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form > div > select,
+    form > div > textarea,
+    form > div > input:not([type=checkbox]):not(input[type=radio]) {
+      position: relative;
+      display: block;
+      min-height: 1px; }
+      @media (min-width: 1025px) {
+        /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > select,
+        form > div > textarea,
+        form > div > input:not([type=checkbox]):not(input[type=radio]) {
+          float: left;
+          width: 33.33333%; } }
+      @media (min-width: 1025px) {
+        /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > select,
+        form > div > textarea,
+        form > div > input:not([type=checkbox]):not(input[type=radio]) {
+          margin-left: 0%; } }
+      /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      form > div > select:only-child,
+      form > div > textarea:only-child,
+      form > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+        position: relative;
+        display: block;
+        min-height: 1px; }
+        @media (min-width: 1025px) {
+          /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+          form > div > select:only-child,
+          form > div > textarea:only-child,
+          form > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+            float: left;
+            width: 100%; } }
+        @media (min-width: 1025px) {
+          /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+          form > div > select:only-child,
+          form > div > textarea:only-child,
+          form > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+            margin-left: 0%; } }
+    @media (min-width: 1025px) {
+      /* line 18, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      form > div > input[type=checkbox], form > div input[type=radio] {
+        margin-left: 16.66667%; } }
+    @media (min-width: 1025px) {
+      /* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      form > div > input[type=submit],
+      form > div > button[type=submit] {
+        margin-left: 16.66667%; } }
+    /* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    form > div > p {
+      margin-bottom: 0px; }
+      @media (min-width: 1025px) {
+        /* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > p {
+          margin-left: 16.66667%; } }
+    @media (max-width: 1024px) {
+      /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      form > div {
+        margin-bottom: 10px; }
+        /* line 27, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        form > div > label:first-child {
+          display: inline-block;
+          padding-left: 0px;
+          padding-bottom: 0px;
+          margin-bottom: 10px; } }
+
+/* line 126, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+input:not([type=checkbox]):not(input[type=radio]) {
+  height: 34px;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  vertical-align: middle;
+  background: #eeeeee;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px; }
+  /* line 137, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  input:not([type=checkbox]):not(input[type=radio]).required {
+    border-color: #d9534f; }
+  /* line 8, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/css3/_placeholder.scss */
+  input:not([type=checkbox]):not(input[type=radio])::-webkit-input-placeholder {
+    color: rgba(179, 179, 179, 0.5); }
+  /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/css3/_placeholder.scss */
+  input:not([type=checkbox]):not(input[type=radio]):-moz-placeholder {
+    color: rgba(179, 179, 179, 0.5); }
+  /* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/css3/_placeholder.scss */
+  input:not([type=checkbox]):not(input[type=radio])::-moz-placeholder {
+    color: rgba(179, 179, 179, 0.5); }
+  /* line 24, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/css3/_placeholder.scss */
+  input:not([type=checkbox]):not(input[type=radio]):-ms-input-placeholder {
+    color: rgba(179, 179, 179, 0.5); }
+  /* line 142, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  input:not([type=checkbox]):not(input[type=radio]).negative {
+    border: 1px solid red; }
+  /* line 144, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  input:not([type=checkbox]):not(input[type=radio]).short {
+    width: 50px; }
+  /* line 147, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  input:not([type=checkbox]):not(input[type=radio])[type=number]::-webkit-inner-spin-button, input:not([type=checkbox]):not(input[type=radio])[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+
+/* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+.form-type-vertical > div > label:first-child {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  text-align: left;
+  margin-bottom: 5px; }
+  @media (min-width: 1025px) {
+    /* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-vertical > div > label:first-child {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 1025px) {
+    /* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-vertical > div > label:first-child {
+      margin-left: 0%; } }
+/* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+.form-type-vertical > div > textarea,
+.form-type-vertical > div > input:not([type=checkbox]):not(input[type=radio]) {
+  position: relative;
+  display: block;
+  min-height: 1px; }
+  @media (min-width: 1025px) {
+    /* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-vertical > div > textarea,
+    .form-type-vertical > div > input:not([type=checkbox]):not(input[type=radio]) {
+      float: left;
+      width: 100%; } }
+  @media (min-width: 1025px) {
+    /* line 66, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-vertical > div > textarea,
+    .form-type-vertical > div > input:not([type=checkbox]):not(input[type=radio]) {
+      margin-left: 0%; } }
+@media (min-width: 1025px) {
+  /* line 68, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-vertical > div > input[type=checkbox], .form-type-vertical > div input[type=radio] {
+    margin-left: 0%; } }
+@media (min-width: 1025px) {
+  /* line 69, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-vertical > div > input[type=submit],
+  .form-type-vertical > div > button[type=submit] {
+    margin-left: 0%; } }
+@media (min-width: 1025px) {
+  /* line 71, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-vertical > div > p {
+    margin-left: 0%; } }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+.form-type-horizontal > div {
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-right: 10px;
+  padding-left: 10px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  .form-type-horizontal > div:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal > div > label:first-child {
+    position: relative;
+    display: block;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    text-align: right; }
+    @media (min-width: 1025px) {
+      /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > label:first-child {
+        float: left;
+        width: 16.66667%; } }
+    @media (min-width: 1025px) {
+      /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > label:first-child {
+        margin-left: 0%; } }
+  /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal > div > select,
+  .form-type-horizontal > div > textarea,
+  .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]) {
+    position: relative;
+    display: block;
+    min-height: 1px; }
+    @media (min-width: 1025px) {
+      /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > select,
+      .form-type-horizontal > div > textarea,
+      .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]) {
+        float: left;
+        width: 33.33333%; } }
+    @media (min-width: 1025px) {
+      /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > select,
+      .form-type-horizontal > div > textarea,
+      .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]) {
+        margin-left: 0%; } }
+    /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal > div > select:only-child,
+    .form-type-horizontal > div > textarea:only-child,
+    .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+      position: relative;
+      display: block;
+      min-height: 1px; }
+      @media (min-width: 1025px) {
+        /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        .form-type-horizontal > div > select:only-child,
+        .form-type-horizontal > div > textarea:only-child,
+        .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+          float: left;
+          width: 100%; } }
+      @media (min-width: 1025px) {
+        /* line 16, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+        .form-type-horizontal > div > select:only-child,
+        .form-type-horizontal > div > textarea:only-child,
+        .form-type-horizontal > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+          margin-left: 0%; } }
+  @media (min-width: 1025px) {
+    /* line 18, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal > div > input[type=checkbox], .form-type-horizontal > div input[type=radio] {
+      margin-left: 16.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal > div > input[type=submit],
+    .form-type-horizontal > div > button[type=submit] {
+      margin-left: 16.66667%; } }
+  /* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal > div > p {
+    margin-bottom: 0px; }
+    @media (min-width: 1025px) {
+      /* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > p {
+        margin-left: 16.66667%; } }
+  @media (max-width: 1024px) {
+    /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal > div {
+      margin-bottom: 10px; }
+      /* line 27, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal > div > label:first-child {
+        display: inline-block;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        margin-bottom: 10px; } }
+
+/* line 42, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+.form-type-horizontal-fullWidth > div > label:first-child {
+  position: relative;
+  display: block;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 7px; }
+  @media (min-width: 1025px) {
+    /* line 42, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal-fullWidth > div > label:first-child {
+      float: left;
+      width: 33.33333%; } }
+  @media (min-width: 1025px) {
+    /* line 42, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal-fullWidth > div > label:first-child {
+      margin-left: 0%; } }
+/* line 46, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+.form-type-horizontal-fullWidth > div > select,
+.form-type-horizontal-fullWidth > div > textarea,
+.form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]) {
+  position: relative;
+  display: block;
+  min-height: 1px; }
+  @media (min-width: 1025px) {
+    /* line 46, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal-fullWidth > div > select,
+    .form-type-horizontal-fullWidth > div > textarea,
+    .form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]) {
+      float: left;
+      width: 66.66667%; } }
+  @media (min-width: 1025px) {
+    /* line 46, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+    .form-type-horizontal-fullWidth > div > select,
+    .form-type-horizontal-fullWidth > div > textarea,
+    .form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]) {
+      margin-left: 0%; } }
+  /* line 50, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal-fullWidth > div > select:only-child,
+  .form-type-horizontal-fullWidth > div > textarea:only-child,
+  .form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+    position: relative;
+    display: block;
+    min-height: 1px; }
+    @media (min-width: 1025px) {
+      /* line 50, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal-fullWidth > div > select:only-child,
+      .form-type-horizontal-fullWidth > div > textarea:only-child,
+      .form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+        float: left;
+        width: 100%; } }
+    @media (min-width: 1025px) {
+      /* line 50, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+      .form-type-horizontal-fullWidth > div > select:only-child,
+      .form-type-horizontal-fullWidth > div > textarea:only-child,
+      .form-type-horizontal-fullWidth > div > input:not([type=checkbox]):not(input[type=radio]):only-child {
+        margin-left: 0%; } }
+@media (min-width: 1025px) {
+  /* line 52, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal-fullWidth > div > input[type=submit],
+  .form-type-horizontal-fullWidth > div > button[type=submit],
+  .form-type-horizontal-fullWidth > div > input[type=checkbox], .form-type-horizontal-fullWidth > div input[type=radio] {
+    margin-left: 33.33333%; } }
+@media (min-width: 1025px) {
+  /* line 55, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_forms.scss */
+  .form-type-horizontal-fullWidth > div > p {
+    margin-left: 33.33333%; } }
+
+/* line 52, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table {
+  width: 100%; }
+  /* line 55, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+  table > thead > tr > th {
+    padding: 10px;
+    line-height: 22px;
+    border-bottom: 2px solid #d5d5d5;
+    color: #333333;
+    vertical-align: bottom;
+    text-align: center;
+    font-weight: bold; }
+  /* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+  table > tbody > tr > td {
+    padding: 10px;
+    line-height: 22px;
+    border-top: 1px solid #d5d5d5;
+    vertical-align: middle;
+    text-align: center; }
+    /* line 73, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+    table > tbody > tr > td.thin {
+      width: 1px; }
+  /* line 77, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+  table .th {
+    font-weight: bold; }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-borderless > tbody > tr > td {
+  border-top: none; }
+
+/* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-centered {
+  width: auto;
+  margin-right: auto;
+  margin-left: auto; }
+
+/* line 43, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-condensed > tbody > tr > td, table.table-style-condensed thead > tr > th {
+  padding: 5px; }
+
+/* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-none {
+  width: auto; }
+  /* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+  table.table-style-none > thead > tr > th {
+    padding: 0px;
+    line-height: inherit;
+    border-bottom: none;
+    color: inherit;
+    vertical-align: initial;
+    text-align: initial;
+    font-weight: inherit; }
+  /* line 31, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+  table.table-style-none > tbody > tr > td {
+    padding: 0px;
+    line-height: inherit;
+    border-top: none;
+    vertical-align: initial;
+    text-align: inherit; }
+
+/* line 84, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-left {
+  display: inline-block; }
+
+/* line 47, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table.table-style-striped > tbody > tr:nth-child(odd) {
+  background: #d5d5d5; }
+
+/* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_tables.scss */
+table > tbody > tr[class^='NWLink']:hover {
+  background: #d5d5d5; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_code.scss */
+code,
+.code,
+pre {
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace; }
+
+/* line 5, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_code.scss */
+.code,
+code {
+  padding: 5px;
+  font-size: 14px;
+  color: #BE640B;
+  background: #d5d5d5;
+  border-radius: 4px; }
+
+/* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_code.scss */
+pre {
+  display: block;
+  background-color: #333333;
+  color: #eeeeee;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 4px; }
+  /* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_code.scss */
+  pre h1, pre h2, pre h3, pre h4, pre h5, pre h6 {
+    color: inherit; }
+
+/* line 2, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_breadcrumbs.scss */
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  color: #333333; }
+  /* line 5, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_breadcrumbs.scss */
+  .breadcrumbs > li {
+    display: inline-block; }
+    /* line 7, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_breadcrumbs.scss */
+    .breadcrumbs > li:not(:last-of-type):after {
+      content: '/';
+      padding-left: 6px;
+      padding-right: 1px; }
+    /* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_breadcrumbs.scss */
+    .breadcrumbs > li:last-of-type {
+      color: #b3b3b3; }
+
+/* line 2, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.align-center {
+  text-align: center; }
+
+/* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.align-left {
+  text-align: left; }
+
+/* line 4, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.align-right {
+  text-align: right; }
+
+/* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+.clear:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 8, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.cursor-pointer {
+  cursor: pointer; }
+
+/* line 10, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.hidden {
+  display: none; }
+
+/* line 12, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+hr {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #d5d5d5; }
+
+/* line 20, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul.list-type-boxes,
+ol.list-type-boxes {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  ul.list-type-boxes:after,
+  ol.list-type-boxes:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  ul.list-type-boxes > li,
+  ol.list-type-boxes > li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1; }
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+    ul.list-type-boxes > li > a,
+    ol.list-type-boxes > li > a {
+      text-align: center; }
+  /* line 74, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  ul.list-type-boxes > li,
+  ol.list-type-boxes > li {
+    font-size: 16px;
+    margin: 0px 10px 10px 0px; }
+/* line 21, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul.list-type-horizontal,
+ol.list-type-horizontal {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
+  ul.list-type-horizontal:after,
+  ol.list-type-horizontal:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 83, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  ul.list-type-horizontal > li,
+  ol.list-type-horizontal > li {
+    display: inline-block;
+    vertical-align: top;
+    zoom: 1; }
+    /* line 87, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+    ul.list-type-horizontal > li > a,
+    ol.list-type-horizontal > li > a {
+      text-align: center; }
+/* line 22, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul.list-type-inline,
+ol.list-type-inline {
+  display: inline-block; }
+/* line 23, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul.list-style-none,
+ol.list-style-none {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px; }
+/* line 24, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul.list-style-none-padded,
+ol.list-style-none-padded {
+  list-style-type: none;
+  margin: 0px; }
+/* line 64, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+ul.list-style-striped > li,
+ol.list-style-striped > li {
+  padding: 5px 10px;
+  border-radius: 4px; }
+  /* line 67, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_mixins.scss */
+  ul.list-style-striped > li:nth-child(odd),
+  ol.list-style-striped > li:nth-child(odd) {
+    background: #d5d5d5; }
+/* line 26, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul li.spacer,
+ol li.spacer {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  height: 22px; }
+/* line 30, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+ul li.negative,
+ol li.negative {
+  border: 1px solid red; }
+
+/* line 33, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.label {
+  font-weight: bold; }
+
+/* line 35, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.noScroll {
+  overflow: hidden; }
+
+/* line 37, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.preformatted {
+  white-space: pre-wrap; }
+
+/* line 39, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
+.strong {
+  font-weight: bold; }
+
+/* line 10, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch; }
+  /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/* line 19, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+a {
+  -webkit-transition: all 0.15s ease-out 0s;
+  -moz-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  position: static;
+  color: blue;
+  text-decoration: none;
+  cursor: pointer; }
+  /* line 25, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  a:hover, a:focus {
+    color: #6666ff;
+    text-decoration: none;
+    outline: none; }
+  /* line 31, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  a.active {
+    color: #6666ff; }
+
+/* line 34, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  min-height: 100%; }
+
+/* line 39, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+button:focus {
+  outline: none; }
+
+/* line 41, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+dl {
+  margin: 0px; }
+  /* line 43, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  dl dt {
+    font-weight: bold; }
+    /* line 45, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+    dl dt:not(:first-child) {
+      margin-top: 10px; }
+    /* line 46, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+    dl dt em {
+      font-weight: normal; }
+
+/* line 50, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: normal; }
+  /* line 54, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+    margin-top: 0px; }
+  /* line 55, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  h1:not(:first-of-type), h2:not(:first-of-type), h3:not(:first-of-type), h4:not(:first-of-type), h5:not(:first-of-type), h6:not(:first-of-type) {
+    margin-top: 20px; }
+  /* line 56, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #b3b3b3; }
+
+/* line 58, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h1 {
+  color: #BE640B; }
+
+/* line 59, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h2 {
+  color: #e97b0e; }
+
+/* line 60, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h3 {
+  color: #f39232; }
+
+/* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h4 {
+  color: #f6a95d; }
+
+/* line 62, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h5 {
+  color: #f8c088; }
+
+/* line 63, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+h6 {
+  color: #fbd7b4; }
+
+/* line 65, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+header > h1 {
+  display: inline-block;
+  margin: 0px; }
+
+/* line 70, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+html {
+  height: 100%;
+  background: #eeeeee; }
+
+/* line 75, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+img {
+  border: 1px solid #d5d5d5;
+  vertical-align: middle;
+  max-width: 100%; }
+
+/* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+label {
+  display: inline-block;
+  text-align: right;
+  padding-right: 10px;
+  width: 150px;
+  font-weight: bold;
+  vertical-align: top; }
+
+/* line 92, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+ol > li.active > a,
+ul > li.active > a {
+  color: #6666ff; }
+/* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+ol:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-'],
+ul:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-'] {
+  float: right;
+  margin-left: 10px; }
+
+/* line 102, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+p:first-child {
+  margin-top: 0px; }
+/* line 103, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+p:last-child {
+  margin-bottom: 0px; }
+
+/* line 106, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+/* line 115, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none; }
+
+/* line 122, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.container {
+  width: 80%;
+  margin: 0px auto;
+  min-height: 100%; }
+  @media (max-width: 759px) {
+    /* line 122, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+    .container {
+      width: 100%; } }
+
+/* line 129, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.content, .content-background {
+  padding: 10px;
+  min-height: 100%; }
+
+/* line 134, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.content-background {
+  background: #eeeeee;
+  border-radius: 4px; }
+
+/* line 140, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.notice {
+  text-align: center;
+  font-style: italic;
+  font-size: 18px;
+  padding: 50px 0px; }
+
+/* line 147, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.positive {
+  color: #468847; }
+
+/* line 148, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.neutral {
+  color: #c09853; }
+
+/* line 149, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.negative {
+  color: #b94a48; }
+
+/* line 150, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+.info {
+  color: #31708f; }
+
+/* line 152, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
+pre.xdebug-var-dump {
+  max-height: none; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista {
+  position: absolute;
+  font-size: 10px;
+  font-family: Tahoma, sans-serif;
+  color: #000;
+  line-height: normal;
+  width: 172px;
+  height: 135px;
+  padding: 14px;
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/frame.png) no-repeat; }
+
+/* header
+********************************************************/
+/* line 15, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header {
+  position: relative;
+  height: 15px;
+  margin-bottom: 5px;
+  padding-top: 1px; }
+
+/* line 22, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .title {
+  text-align: center;
+  margin: 0 18px 0 18px; }
+
+/* line 30, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .previous,
+.datepicker_vista .header .next,
+.datepicker_vista .header .closeButton {
+  position: absolute;
+  cursor: pointer;
+  text-indent: -40px;
+  overflow: hidden;
+  width: 12px;
+  height: 12px;
+  top: 2px;
+  background-image: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/buttons.png);
+  background-position: left top;
+  background-repeat: no-repeat; }
+
+/* line 45, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .previous {
+  left: 4px; }
+
+/* line 48, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .previous:hover {
+  background-position: left bottom; }
+
+/* line 51, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .next {
+  right: 4px;
+  background-position: -13px top; }
+
+/* line 55, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .next:hover {
+  background-position: -13px bottom; }
+
+/* line 58, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .closeButton {
+  display: none;
+  right: 0px;
+  top: 0px;
+  background-position: right top; }
+
+/* line 64, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .header .closeButton:hover {
+  background-position: right bottom; }
+
+/* body
+********************************************************/
+/* line 70, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .body {
+  position: relative;
+  top: 0px;
+  left: 2px;
+  width: 168px;
+  height: 112px;
+  overflow: hidden; }
+
+/* time
+********************************************************/
+/* line 81, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time {
+  position: relative;
+  width: 100%;
+  height: 100%; }
+
+/* line 87, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time .hour,
+.datepicker_vista .time .separator,
+.datepicker_vista .time .minutes {
+  border: 1px solid #ccc;
+  background: #fff;
+  width: 50px;
+  font-size: 32px;
+  position: absolute;
+  top: 10px;
+  text-align: center;
+  padding: 2px; }
+
+/* line 100, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time .hour {
+  left: 15px; }
+
+/* line 103, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time .separator {
+  background: transparent;
+  border: 0px;
+  width: 10px;
+  left: 76px; }
+
+/* line 110, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time .minutes {
+  left: 95px; }
+
+/* line 113, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .time .ok {
+  position: absolute;
+  top: 65px;
+  width: 136px;
+  left: 15px;
+  font-size: 20px; }
+
+/* days-grid
+********************************************************/
+/* line 123, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .day {
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  width: 23px;
+  height: 15px;
+  margin: 0 1px 1px 0; }
+
+/* line 131, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .titles {
+  height: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 1px; }
+
+/* line 136, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .day0 {
+  margin-right: 0; }
+
+/* line 140, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .week5 .day {
+  margin-bottom: 0; }
+
+/* days-colors
+********************************************************/
+/* line 146, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .week .day {
+  cursor: pointer; }
+
+/* line 149, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .week .day:hover {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/days.png) left top no-repeat;
+  color: #0084AA; }
+
+/* line 154, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .otherMonth {
+  color: #aaa; }
+
+/* line 158, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .days .selected {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/days.png) left bottom no-repeat;
+  color: #316879; }
+
+/* months-grid
+********************************************************/
+/* line 165, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .months .month {
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 6px;
+  width: 55px;
+  overflow: hidden;
+  height: 21px;
+  margin: 0 1px 1px 0; }
+
+/* line 176, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .months .month3,
+.datepicker_vista .months .month6,
+.datepicker_vista .months .month9,
+.datepicker_vista .months .month12 {
+  margin-right: 0; }
+
+/* line 183, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .months .month10,
+.datepicker_vista .months .month11,
+.datepicker_vista .months .month12 {
+  margin-bottom: 0; }
+
+/* months-colors
+********************************************************/
+/* line 191, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .months .month:hover {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/months.png) left top no-repeat;
+  color: #0084AA; }
+
+/* line 196, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .months .selected {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/months.png) left bottom no-repeat;
+  color: #316879; }
+
+/* years-grid
+********************************************************/
+/* line 203, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .years .year {
+  float: left;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 6px;
+  width: 32px;
+  overflow: hidden;
+  height: 21px;
+  margin: 0 1px 1px 0; }
+
+/* line 214, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .years .year4,
+.datepicker_vista .years .year9,
+.datepicker_vista .years .year14,
+.datepicker_vista .years .year19 {
+  margin-right: 0; }
+
+/* line 221, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .years .year15,
+.datepicker_vista .years .year16,
+.datepicker_vista .years .year17,
+.datepicker_vista .years .year18,
+.datepicker_vista .years .year19 {
+  margin-bottom: 0; }
+
+/* years-colors
+********************************************************/
+/* line 231, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .years .year:hover {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/years.png) left top no-repeat;
+  color: #0084AA; }
+
+/* line 236, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .years .selected {
+  background: url(/novumWarePublic/js/mootools/plugins/DatePicker/datepicker_vista/years.png) left bottom no-repeat;
+  color: #316879; }
+
+/* global
+********************************************************/
+/* line 243, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista .unavailable {
+  background: none !important;
+  color: #fbb !important;
+  cursor: default !important; }
+
+/* line 249, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista table {
+  border-spacing: 0; }
+
+/* line 253, ../../../vendor/markisacat/novumware-module/public/js/mootools/plugins/DatePicker/datepicker_vista/datepicker_vista.scss */
+.datepicker_vista th,
+.datepicker_vista td {
+  padding: 0; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+#nw-dialog-overlay {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 20000; }
+
+/* line 11, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+#nw-dialog-dialog {
+  display: block;
+  position: fixed;
+  min-width: 300px;
+  min-height: 200px;
+  background: #eeeeee;
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5); }
+  /* line 20, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+  #nw-dialog-dialog #nw-dialog-title {
+    border-bottom: 1px solid #d5d5d5;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center; }
+  /* line 27, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+  #nw-dialog-dialog #nw-dialog-content {
+    padding: 10px; }
+  /* line 30, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+  #nw-dialog-dialog #nw-dialog-buttons {
+    padding: 10px;
+    border-top: 1px solid #d5d5d5;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    text-align: right; }
+    /* line 38, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Dialog/stylesheets/scss/nwDialog.scss */
+    #nw-dialog-dialog #nw-dialog-buttons #nw-dialog-confirm {
+      margin-left: 10px; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/DatePicker/stylesheets/scss/nwDatePicker.scss */
+.datepicker_vista {
+  box-sizing: content-box;
+  transition: initial; }
+  /* line 4, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/DatePicker/stylesheets/scss/nwDatePicker.scss */
+  .datepicker_vista * {
+    box-sizing: content-box;
+    transition: initial; }
+  /* line 8, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/DatePicker/stylesheets/scss/nwDatePicker.scss */
+  .datepicker_vista .column {
+    text-align: center; }
+  /* line 9, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/DatePicker/stylesheets/scss/nwDatePicker.scss */
+  .datepicker_vista table {
+    display: inline-block;
+    width: initial; }
+    /* line 12, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/DatePicker/stylesheets/scss/nwDatePicker.scss */
+    .datepicker_vista table td, .datepicker_vista table th {
+      border: none;
+      line-height: initial; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/FlashMessage/stylesheets/scss/nwFlashMessage.scss */
+.nw-flashMessage {
+  position: fixed;
+  left: 50%;
+  top: 20%;
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+  text-align: center;
+  min-width: 30%;
+  z-index: 10600; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Form/Validator/stylesheets/scss/nwValidator.scss */
+.nwValidator-errorElmt {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 5px;
+  background: #f2dede;
+  color: #b94a48;
+  font-size: 14px;
+  border: 1px solid #ebccd1;
+  border-radius: 4px; }
+
+/* line 14, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Form/Validator/stylesheets/scss/nwValidator.scss */
+form input.validation-failed,
+form textarea.validation-failed,
+form select.validation-failed {
+  background: #f2dede;
+  border: 1px solid #ebccd1;
+  color: #b94a48; }
+
+/* line 2, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Link/stylesheets/scss/nwLink.scss */
+.NWLink, .NWLink\:nothing, .NWLink\:ajax, .NWLink\:json, .NWLink\:form {
+  cursor: pointer; }
+
+/* line 6, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/LoadingImage/stylesheets/scss/nwLoadingImage.scss */
+.nw-loadingImage {
+  position: static;
+  z-index: 20000; }
+  /* line 8, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/LoadingImage/stylesheets/scss/nwLoadingImage.scss */
+  .nw-loadingImage .icon-loading {
+    font-size: 32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -16px;
+    margin-top: -10px; }
+
+/* line 19, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/LoadingImage/stylesheets/scss/nwLoadingImage.scss */
+#nw-loadingImage-overlay {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Form/stylesheets/scss/nwForm.scss */
+form .nw-loadingImage .icon-loading {
+  font-size: 24px;
+  margin-left: -12px; }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+.NWPopup {
+  cursor: pointer; }
+
+/* line 5, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+#nw-popup-measure {
+  position: absolute;
+  top: -99999px;
+  left: -99999px;
+  visibility: hidden;
+  max-width: 99999px;
+  max-height: 99999px;
+  overflow: visible !important;
+  width: auto;
+  height: auto; }
+
+/* line 17, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+#nw-popup-overlay {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10000;
+  text-align: center; }
+  /* line 26, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-overlay .nw-loadingImage {
+    color: #eeeeee; }
+
+/* line 29, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+#nw-popup-wrapper {
+  display: inline-block;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  background: #eeeeee;
+  border-radius: 4px;
+  text-align: left; }
+  /* line 35, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper > .content, #nw-popup-wrapper > .content-background {
+    padding: 10px; }
+  /* line 36, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper #nw-popup-title {
+    display: block;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: rgba(17, 17, 17, 0.95);
+    color: #cccccc;
+    text-align: center;
+    font-style: italic;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px;
+    border-radius: 0px 0px 3px 3px; }
+  /* line 51, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper #nw-popup-closeBtn {
+    position: absolute;
+    right: -12px;
+    top: -12px;
+    cursor: pointer;
+    line-height: 18px;
+    border-radius: 50%;
+    background: #eeeeee;
+    color: #333333;
+    box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275); }
+    /* line 61, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-closeBtn:hover, #nw-popup-wrapper #nw-popup-closeBtn:active {
+      color: #6666ff; }
+    /* line 63, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-closeBtn > .icon-close {
+      font-size: 24px;
+      margin-right: -1px; }
+  /* line 68, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper #nw-popup-gallery-arrows {
+    -webkit-transition: all 0.15s ease-out 0s;
+    -moz-transition: all 0.15s ease-out 0s;
+    transition: all 0.15s ease-out 0s;
+    position: static;
+    display: none;
+    opacity: 0; }
+    /* line 73, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-gallery-arrows:hover {
+      opacity: 1; }
+    /* line 74, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-previous,
+    #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-next {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      width: 35%;
+      cursor: pointer; }
+      /* line 81, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-previous:hover a,
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-next:hover a {
+        display: block; }
+      /* line 82, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-previous a,
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-next a {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 48%;
+        color: #333333;
+        background: #eeeeee;
+        border-radius: 50%;
+        border: 2px solid #333333;
+        box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+        text-align: center;
+        box-sizing: content-box; }
+    /* line 97, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-previous {
+      left: 0px; }
+      /* line 99, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-previous a {
+        left: 20px; }
+    /* line 101, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+    #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-next {
+      right: 0px; }
+      /* line 103, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+      #nw-popup-wrapper #nw-popup-gallery-arrows #nw-popup-gallery-next a {
+        right: 20px; }
+  /* line 106, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper > .content, #nw-popup-wrapper > .content-background {
+    height: 100%;
+    overflow: auto; }
+
+@media (min-width: 760px) {
+  /* line 116, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper > .content > form, #nw-popup-wrapper > .content-background > form {
+    min-width: 500px; } }
+@media (max-width: 759px) {
+  /* line 115, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Popup/stylesheets/scss/nwPopup.scss */
+  #nw-popup-wrapper > .content, #nw-popup-wrapper > .content-background {
+    width: 100%; } }
+
+/* line 1, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Tip/stylesheets/scss/nwTip.scss */
+#nw-tip {
+  position: fixed;
+  margin: 10px 0px 0px 10px;
+  background: #333333;
+  opacity: 0.9;
+  border-radius: 4px;
+  box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
+  font-size: 11px;
+  padding: 10px; }
+  /* line 12, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Tip/stylesheets/scss/nwTip.scss */
+  #nw-tip #nw-tip-title {
+    color: #ee7d0e;
+    font-weight: bold; }
+  /* line 16, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Tip/stylesheets/scss/nwTip.scss */
+  #nw-tip #nw-tip-html {
+    color: #eeeeee; }
+
+/* line 12, ../scss/styles.scss */
+body {
+  padding-top: 50px; }
+
+/* line 14, ../scss/styles.scss */
+header.navbar {
+  position: fixed;
+  border-radius: 0px;
+  z-index: 1030; }
+
+/* line 24, ../scss/styles.scss */
+ul.nav.nav-auth {
+  display: inline-block;
+  float: right;
+  margin: 5px 5px 0px 0px; }
+
+/*# sourceMappingURL=styles.css.map */

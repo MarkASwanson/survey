@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"module": "amd",
+		"noImplicitAny": false,
+		"removeComments": false,
+		"sourceMap": false,
+		"target": "ES5",
+		"outFile":	"./react/app/app.js"
+	},
+	"exclude": [
+		"node_modules",
+		"typings"
+	]
+}

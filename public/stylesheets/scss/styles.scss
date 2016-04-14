@@ -1,0 +1,31 @@
+// ============================================== NOVUMWARE VARIABLE OVERRIDES ===============================================
+
+
+// ============================================== NOVUMWARE STYLES ===============================================
+@import '../../../vendor/markisacat/novumware-module/public/stylesheets/scss/nwMain.scss'; // NOVUMWARE STYLES
+
+
+// ============================================== PROJECT STYLES ===============================================
+
+
+// ============================================== LAYOUT ===============================================
+body { padding-top:	$navbar-height; }
+
+header.navbar { @include	navbar-type-fixed-top; }
+
+// h2:before {
+// 	display:	block;
+// 	content:	"";
+// 	margin-top:	-($navbar-height + $margin);
+// 	height:		$navbar-height + $margin;
+// 	visibility:	hidden;
+// }
+
+ul.nav.nav-auth {
+	display:	inline-block;
+	float:		right;
+	margin:		$margin-small $margin-small 0px 0px;
+}
+
+
+// ============================================== MODULE STYLES ===============================================

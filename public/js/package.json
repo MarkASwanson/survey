@@ -1,0 +1,15 @@
+{
+  "name": "scheduler",
+  "version": "1.0.0",
+  "description": "working",
+  "main": "main",
+  "scripts": {
+    "start": "tsc -w"
+  },
+  "author": "Mark Swanson",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.0.1",
+    "react-addons-css-transition-group": "^15.0.1"
+  }
+}

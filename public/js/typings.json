@@ -1,0 +1,14 @@
+{
+	"name": "scheduler",
+	"version": false,
+	"dependencies": {
+		"requirejs": "registry:npm/requirejs#2.2.0+20160319062357"
+	},
+	"ambientDependencies": {
+		"react": "registry:dt/react#0.14.0+20160319053454",
+		"react-addons-css-transition-group": "registry:dt/react-addons-css-transition-group#0.14.0+20160316155526",
+		"react-addons-transition-group": "registry:dt/react-addons-transition-group#0.14.0+20160316155526",
+		"react-dom": "registry:dt/react-dom#0.14.0+20160316155526",
+		"react-global": "registry:dt/react-global#0.14.0+20160316155526"
+	}
+}
