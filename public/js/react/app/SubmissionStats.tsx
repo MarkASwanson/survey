@@ -40,10 +40,11 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			);
 		});
 
-		var isAnswerCorrect = (this.props.question.selected_answer_id == this.props.question.correct_answer_id);
+		var isCorrectAnswer = (this.props.question.selected_answer_id == this.props.question.correct_answer_id);
+		var selectedAnswerElmt = <div className={((isCorrectAnswer) ? 'positive' : 'negative') + ' selectedAnswerText alert phone-andSmaller'}><span className="text">{(isCorrectAnswer) ? 'Well done!' : 'Bummer...'} You chose</span> <span className="answer">"{selectedAnswerText}"</span></div>;
 		return (
 			<div>
-				<div className={((isAnswerCorrect) ? 'positive' : 'negative') + ' selectedAnswerText alert phone-andSmaller'}><span className="text">{(isAnswerCorrect) ? 'Well done!' : 'Bummer...'} You chose</span> <span className="answer">"{selectedAnswerText}"</span></div>
+				{(this.props.question.selected_answer_id)?selectedAnswerElmt:''}
 				<React.addons.CSSTransitionGroup component="ul" className="submissionStats list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
 					{submissionStatRows}
 				</React.addons.CSSTransitionGroup>
