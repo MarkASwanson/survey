@@ -71,7 +71,7 @@ class Answers extends React.Component<IAnswersProps, IAnswersState> {
 
 	public render() {
 		return (
-			<li><input type="radio" name="answer_id" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> {this.props.answer.answer_text}</li>
+			<li><input id={'answerRadio-' + this.props.answer.id} type="radio" name="answer_id" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> <label htmlFor={'answerRadio-' + this.props.answer.id}>{this.props.answer.answer_text}</label></li>
         );
 	}
 }

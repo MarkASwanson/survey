@@ -157,7 +157,7 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
             this.props.selectAction(inputElmt);
         };
         Answers.prototype.render = function () {
-            return (React.createElement("li", null, React.createElement("input", {type: "radio", name: "answer_id", value: this.props.answer.id, onChange: this.handleChange.bind(this)}), " ", this.props.answer.answer_text));
+            return (React.createElement("li", null, React.createElement("input", {id: 'answerRadio-' + this.props.answer.id, type: "radio", name: "answer_id", value: this.props.answer.id, onChange: this.handleChange.bind(this)}), " ", React.createElement("label", {htmlFor: 'answerRadio-' + this.props.answer.id}, this.props.answer.answer_text)));
         };
         return Answers;
     }(React.Component));
@@ -314,8 +314,6 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
                 this.updateData(data);
         }
         SubmissionStatModel.prototype.updateData = function (data) {
-            if (data.id)
-                this.id = Number(data.id);
             if (data.answer_id)
                 this.answer_id = Number(data.answer_id);
             if (data.answer_text)

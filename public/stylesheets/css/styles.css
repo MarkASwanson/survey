@@ -3364,28 +3364,31 @@ ul.nav.nav-auth {
   #survey form {
     text-align: center; }
     /* line 37, ../scss/styles.scss */
+    #survey form label {
+      font-weight: normal; }
+    /* line 41, ../scss/styles.scss */
     #survey form ul {
       text-align: left; }
-      /* line 39, ../scss/styles.scss */
+      /* line 43, ../scss/styles.scss */
       #survey form ul li {
         margin: 5px 0px; }
-    /* line 44, ../scss/styles.scss */
+    /* line 48, ../scss/styles.scss */
     #survey form button {
       margin-top: 15px; }
 
-/* line 50, ../scss/styles.scss */
+/* line 54, ../scss/styles.scss */
 .submissionStats {
   display: inline-block;
   text-align: left; }
-  /* line 54, ../scss/styles.scss */
+  /* line 58, ../scss/styles.scss */
   .submissionStats li {
     white-space: nowrap; }
-  /* line 58, ../scss/styles.scss */
+  /* line 62, ../scss/styles.scss */
   .submissionStats .count {
     width: 30px;
     display: inline-block;
     text-align: right; }
-  /* line 64, ../scss/styles.scss */
+  /* line 68, ../scss/styles.scss */
   .submissionStats .fullBar {
     background-color: #CECBD2;
     width: 150px;
@@ -3398,20 +3401,20 @@ ul.nav.nav-auth {
     margin: 0px 5px;
     position: relative;
     text-align: center; }
-  /* line 78, ../scss/styles.scss */
+  /* line 82, ../scss/styles.scss */
   .submissionStats .percentBar {
     background-color: #F4BB5F;
     position: absolute;
     left: 0px;
     top: 0px;
     bottom: 0px; }
-  /* line 86, ../scss/styles.scss */
+  /* line 90, ../scss/styles.scss */
   .submissionStats .percentText {
     font-size: 0.8em;
     margin-bottom: 3px;
     display: inline-block;
     vertical-align: middle; }
-  /* line 93, ../scss/styles.scss */
+  /* line 97, ../scss/styles.scss */
   .submissionStats .selectedAnswerText {
     position: absolute;
     width: 210px;
@@ -3419,10 +3422,10 @@ ul.nav.nav-auth {
     text-align: right;
     padding-right: 5px; }
     @media (max-width: 759px) {
-      /* line 93, ../scss/styles.scss */
+      /* line 97, ../scss/styles.scss */
       .submissionStats .selectedAnswerText {
         left: -200px; }
-        /* line 103, ../scss/styles.scss */
+        /* line 107, ../scss/styles.scss */
         .submissionStats .selectedAnswerText .text {
           display: none; } }
 

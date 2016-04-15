@@ -59,7 +59,6 @@ export class SubmissionStatModel extends NovumWare.AbstractModel {
 	}
 
 	updateData(data) {
-		if (data.id) this.id = Number(data.id);
 		if (data.answer_id) this.answer_id = Number(data.answer_id);
 		if (data.answer_text) this.answer_text = data.answer_text;
 		if (data.count) this.count = Number(data.count);
