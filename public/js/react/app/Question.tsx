@@ -27,10 +27,10 @@ export class Question extends React.Component<IQuestionProps, IQuestionState> {
 	        <div>
 				<h2>{this.props.question.question_text}</h2>
 				<form className="NWForm:json" method="post" action={'/questions/'+this.props.question.id+'/submit'}>
-					{answers}
-					<div><button type="submit" disabled={this.props.question.selected_answer_id ? '' : 'disabled'}>
+					<ul className="list-style-none">{answers}</ul>
+					<button type="submit" disabled={this.props.question.selected_answer_id ? '' : 'disabled'}>
 						{this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'}
-					</button></div>
+					</button>
 				</form>
 			</div>
 		);
@@ -55,9 +55,7 @@ class Answers extends React.Component<IAnswersProps, IAnswersState> {
 
 	public render() {
 		return (
-			<div>
-				<input type="radio" name="answer_id" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> {this.props.answer.answer_text}
-			</div>
+			<li><input type="radio" name="answer_id" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> {this.props.answer.answer_text}</li>
         );
 	}
 }
@@ -77,7 +75,7 @@ export class QuestionModel extends NovumWare.AbstractModel {
 			console.log('QuestionModel fetching answers');
 			new NWRequest.JSON({
 				url: '/questions/'+this.id+'/answers',
-				onSuccess: function(response) { this.answers = response.answers; }.bind(this)
+				onSuccess: (response)=>{ this.answers = response.answers; }
 			});
 			this._answers = [];
 		}

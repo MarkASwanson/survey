@@ -8,7 +8,7 @@ declare var NWRequest;
 
 // =========================================== Question Controller ==========================================
 interface IQuestionControllerProps {
-	questionUrl: string;
+	question_id: number;
 }
 
 interface IQuestionControllerState {
@@ -24,10 +24,8 @@ export class QuestionController extends React.Component<IQuestionControllerProps
 		this.questionStore.bind('change', this.onQuestionStoreChange.bind(this));
 
 		new NWRequest.JSON({
-			url: this.props.questionUrl,
-			onSuccess: function(response) {
-				this.questionStore.question = response.question;
-			}.bind(this)
+			url: '/questions/' + this.props.question_id,
+			onSuccess: (response)=>{ this.questionStore.question = response.question; }
 		});
 
 		$nw.initContainer(ReactDOM.findDOMNode(this));

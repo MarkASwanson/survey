@@ -77,6 +77,15 @@ return [
 										'action'	=> 'submit'
 									]
 								]
+							],
+							'submission-stats'	=> [
+								'type'		=> 'literal',
+								'options'	=> [
+									'route'		=> '/submission-stats',
+									'defaults'	=> [
+										'action'	=> 'submission-stats'
+									]
+								]
 							]
 						]
 					]

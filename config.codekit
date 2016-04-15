@@ -138,6 +138,26 @@
 		"suppressImplicitAnyIndexErrors": 0,
 		"targetECMAVersion": 1
 		},
+	"\/public\/js\/react\/app\/SubmissionStatsController.tsx": {
+		"createDeclarationFile": 0,
+		"createSourceMap": 0,
+		"fileType": 128,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/js\/react\/app\/SubmissionStatsController.tsx",
+		"jsxMode": 0,
+		"minifyOutput": 0,
+		"moduleResolutionType": 0,
+		"moduleType": 0,
+		"noImplicitAny": 1,
+		"outputAbbreviatedPath": "\/public\/js\/react\/app\/SubmissionStatsController.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"preserveConstEnums": 0,
+		"removeComments": 0,
+		"suppressImplicitAnyIndexErrors": 0,
+		"targetECMAVersion": 1
+		},
 	"\/public\/js\/react\/app\/SurveyController.tsx": {
 		"createDeclarationFile": 0,
 		"createSourceMap": 0,

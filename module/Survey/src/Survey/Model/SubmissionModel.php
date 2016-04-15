@@ -5,7 +5,6 @@ class SubmissionModel extends \NovumWare\Model\AbstractModel {
 
 	public $id;
 	public $answer_id;
-	public $answer_text;
 	
 	
 	// ====================================================== GET / SET ======================================================

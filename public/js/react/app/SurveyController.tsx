@@ -1,46 +1,36 @@
 /// <reference path="../../typings/browser.d.ts" />
 import * as NovumWare from "../novumware";
-import {Survey as Survey} from "./Survey";
-import {SurveyModel as SurveyModel} from "./Survey";
+import {SubmissionStatsController as SubmissionStatsController} from "./SubmissionStatsController";
+import {QuestionController as QuestionController} from "./QuestionController";
 declare var NWRequest;
-
 
 // =========================================== Survey Controller ==========================================
 interface ISurveyControllerProps {
-	surveyUrl: string;
+	question_id: number;
 }
 
-interface ISurveyControllerState {
-	survey: SurveyModel;
-}
+interface ISurveyControllerState {}
 
 export class SurveyController extends React.Component<ISurveyControllerProps, ISurveyControllerState> {
-	state: ISurveyControllerState = { survey: new SurveyModel() };
-
-	private surveyStore: SurveyStore = new SurveyStore();
+	state: ISurveyControllerState = {};
 
 	componentDidMount() {
-		this.surveyStore.bind('change', this.onSurveyStoreChange.bind(this));
-
-		new NWRequest.JSON({
-			url: this.props.surveyUrl,
-			onSuccess: function(response) {
-				this.surveyStore = response.survey;
-			}.bind(this)
-		});
-	}
-
-	componentWillUnmount() {
-		this.surveyStore.unbind('change', this.onSurveyStoreChange.bind(this));
-	}
-
-	onSurveyStoreChange() {
-		console.log('SurveyController.onSurveyStoreChange');
-		this.setState({ survey: this.surveyStore.survey });
+		// new NWRequest.JSON({
+		// 	url: this.props.surveyUrl,
+		// 	onSuccess: function(response) {
+		// 		this.surveyStore = response.survey;
+		// 	}.bind(this)
+		// });
 	}
 
 	render() {
-		return <Survey survey={this.state.survey} />;
+		var submissionStatsController = <SubmissionStatsController question_id={this.props.question_id} />;
+		var questionController = <QuestionController question_id={this.props.question_id} />;
+		return (
+	        <div>
+	        	{questionController}
+	       	</div>
+        );
 	}
 }
 
