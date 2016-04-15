@@ -3411,12 +3411,19 @@ ul.nav.nav-auth {
     margin-bottom: 3px;
     display: inline-block;
     vertical-align: middle; }
-  /* line 97, ../scss/styles.scss */
+  /* line 93, ../scss/styles.scss */
   .submissionStats .selectedAnswerText {
     position: absolute;
     width: 210px;
     left: -230px;
     text-align: right;
     padding-right: 5px; }
+    @media (max-width: 759px) {
+      /* line 93, ../scss/styles.scss */
+      .submissionStats .selectedAnswerText {
+        left: -200px; }
+        /* line 103, ../scss/styles.scss */
+        .submissionStats .selectedAnswerText .text {
+          display: none; } }
 
 /*# sourceMappingURL=styles.css.map */

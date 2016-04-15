@@ -90,16 +90,20 @@ ul.nav.nav-auth {
 		vertical-align:	middle;
 	}
 
-	.answerText {
-		// white-space:	nowrap;
-	}
-
 	.selectedAnswerText {
 		position:		absolute;
 		width:			210px;
 		left:			-230px;
 		text-align:		right;
 		padding-right:	$padding-small;
+
+		@include	phone-andSmaller {
+			left:	-200px;
+
+			.text {
+				display:	none;
+			}
+		}
 	}
 }
 

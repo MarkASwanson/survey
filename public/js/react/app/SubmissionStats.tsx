@@ -22,7 +22,7 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			var isSelectedAnswer = (this.props.question.selected_answer_id == submissionStat.answer_id);
 			var percent = Math.round(submissionStat.count / totalSubmissionCount * 100) || 0;
 
-			var selectedAnswerElmt = <span className="selectedAnswerText">{(isCorrectRow)?'Well done!':'Bummer...'} You answered <i className="icon-chevron-right no-float"></i> </span>;
+			var selectedAnswerElmt = <span className="selectedAnswerText"><span className="text">{(isCorrectRow)?'Well done!':'Bummer...'} You answered</span> <i className="icon-chevron-right no-float"></i> </span>;
 
 			return (
 				<li key={submissionStat.answer_id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
