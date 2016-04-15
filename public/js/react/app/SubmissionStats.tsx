@@ -13,6 +13,11 @@ interface ISubmissionStatsProps {
 interface ISubmissionStatsState {}
 
 export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISubmissionStatsState> {
+	componentDidMound() {
+		// sort submission stats based on answer order
+		// this.props.submissionStats.sort((a: SubmissionStatModel, b: SubmissionStatModel) => { return a.answer_order - b.answer_order; });
+	}
+
 	render() {
 		var totalSubmissionCount = 0;
 		for (var submissionStat of this.props.submissionStats) totalSubmissionCount += submissionStat.count;
@@ -38,9 +43,9 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 		});
 
 		return (
-			<ul className="submissionStats list-style-none">
+			<React.addons.CSSTransitionGroup component="ul" className="submissionStats list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
 				{submissionStatRows}
-			</ul>
+			</React.addons.CSSTransitionGroup>
         )
 	}
 }
@@ -51,6 +56,7 @@ export class SubmissionStatModel extends NovumWare.AbstractModel {
 	id: number;
 	answer_id: number;
 	answer_text: string;
+	answer_order: number;
 	count: number;
 
 	constructor(data?) {
@@ -63,6 +69,7 @@ export class SubmissionStatModel extends NovumWare.AbstractModel {
 		if (data.answer_id) this.answer_id = Number(data.answer_id);
 		if (data.answer_text) this.answer_text = data.answer_text;
 		if (data.count) this.count = Number(data.count);
+		if (data.answer_order) this.answer_order = Number(data.answer_order);
 		super.updateData(data);
 	}
 }

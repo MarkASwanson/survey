@@ -96,6 +96,10 @@ class SubmissionStatsStore extends NovumWare.AbstractStore {
 			submissionStat.bind('change', this.onSubmissionStatsChange.bind(this));
 			this._submissions.push(submissionStat);
 		}
+
+		// sort submission stats based on answer order
+		this._submissions.sort((a: SubmissionStatModel, b: SubmissionStatModel) => { return a.answer_order - b.answer_order; });
+
 		this.trigger('change');
 	}
 	onSubmissionStatsChange() {

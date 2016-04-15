@@ -12,7 +12,7 @@ class SubmissionStatMapper extends \NovumWare\Db\Table\Mapper\NoDb\AbstractNoDbM
 	function fetchManyWithQuestionId($question_id) {
 		$select = $this->getSelect('submission');
 		$select->columns(['*', 'count'=>new Expression('COUNT(*)')]);
-		$select->join('answer', 'submission.answer_id=answer.id', ['answer_text']);
+		$select->join('answer', 'submission.answer_id=answer.id', ['answer_text', 'answer_order'=>'order']);
 		$select->join('question', 'answer.question_id=question.id', []);
 		$select->where(['question.id = ?'=>$question_id]);
 		$select->group('submission.answer_id');

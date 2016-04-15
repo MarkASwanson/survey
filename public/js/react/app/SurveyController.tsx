@@ -16,7 +16,13 @@ interface ISurveyControllerState {
 }
 
 export class SurveyController extends React.Component<ISurveyControllerProps, ISurveyControllerState> {
-	state: ISurveyControllerState = {};
+	state: ISurveyControllerState = {
+		// answeredQuestion: new QuestionModel({
+		// 	id:	1,
+		// 	selected_answer_id: 1,
+		// 	correct_answer_id: 1
+		// })
+	};
 
 	handleQuestionSubmitSuccess(question:QuestionModel) {
 		console.log('SurveyController.handleQuestionSubmitSuccess');

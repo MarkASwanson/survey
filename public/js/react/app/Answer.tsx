@@ -25,6 +25,7 @@ export class AnswerModel extends NovumWare.AbstractModel {
 	id: number;
 	question_id: number;
 	answer_text: string;
+	order: number;
 
 	constructor(data?) {
 		super();
@@ -35,6 +36,7 @@ export class AnswerModel extends NovumWare.AbstractModel {
 		if (data.id) this.id = Number(data.id);
 		if (data.question_id) this.question_id = Number(data.question_id);
 		if (data.answer_text) this.answer_text = data.answer_text;
+		if (data.order) this.order = Number(data.order);
 		super.updateData(data);
 	}
 }

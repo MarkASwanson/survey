@@ -41,7 +41,9 @@ export class Question extends React.Component<IQuestionProps, IQuestionState> {
 	        <div>
 				<h2>{this.props.question.question_text}</h2>
 				<form className="NWForm:json" method="post" action={'/questions/' + this.props.question.id + '/submit'} data-nwform-successcb="onQuestionAnswered">
-					<ul className="list-style-none">{answers}</ul>
+					<React.addons.CSSTransitionGroup component="ul" className="list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+						{answers}
+					</React.addons.CSSTransitionGroup>
 					<button type="submit" disabled={this.props.question.selected_answer_id ? '' : 'disabled'}>
 						{this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'}
 					</button>
@@ -101,6 +103,10 @@ export class QuestionModel extends NovumWare.AbstractModel {
 			newAnswer.bind('change', this.onAnswersChange.bind(this));
 			this._answers.push(newAnswer);
 		}
+		
+		// sort answers
+		this._answers.sort((a: AnswerModel, b: AnswerModel) => { return a.order - b.order; });
+		
 		this.trigger('change');
 	}
 

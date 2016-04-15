@@ -8,13 +8,13 @@ Create a one page application that shows a survey question with possible answers
 
  
 
-A site visitor who views the survey page will see 1 Survey Question with 2 ... N Survey Answers.
+√ A site visitor who views the survey page will see 1 Survey Question with 2 ... N Survey Answers.
 
-The visitor will only be able to select a single answer for the question.
+√ The visitor will only be able to select a single answer for the question.
 
-The visitor will be required to select a single answer before submitting the form.
+√ The visitor will be required to select a single answer before submitting the form.
 
-After form submission the visitor should see other answers that have been submitted in the past.
+√ After form submission the visitor should see other answers that have been submitted in the past.
 
  
 
@@ -22,21 +22,21 @@ Tech:
 
 --------------------------------------
 
-The application question and its answers should come from a datastore on the server. This could be a simple JSON file, Redis, LevelDB, or any other database (completely up to you).
+√ The application question and its answers should come from a datastore on the server. This could be a simple JSON file, Redis, LevelDB, or any other database (completely up to you).
 
-The application webpage should be served from a web server running Node.js or PHP
+√ The application webpage should be served from a web server running Node.js or PHP
 
-The application should use ReactJS for the front end if you have sufficient React experience.  If not, you may choose JQuery, Angular, or something else if you prefer / are more comfortable with.
+√ The application should use ReactJS for the front end if you have sufficient React experience.  If not, you may choose JQuery, Angular, or something else if you prefer / are more comfortable with.
 
-The application should have its visitor answers persist after it is restarted.
+√ The application should have its visitor answers persist after it is restarted.
 
-The submission and results should be displayed without refreshing the webpage. I.E. using Ajax.
+√ The submission and results should be displayed without refreshing the webpage. I.E. using Ajax.
 
 The rendered HTML should be semantic and page should have a good user experience based on best practices.
 
  
 
-Survey Question Structure
+√ Survey Question Structure
 
 ================
 

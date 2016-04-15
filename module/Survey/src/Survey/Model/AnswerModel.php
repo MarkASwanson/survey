@@ -6,6 +6,7 @@ class AnswerModel extends \NovumWare\Model\AbstractModel {
 	public $id;
 	public $question_id;
 	public $answer_text;
+	public $order;
 	
 	
 	// ====================================================== GET / SET ======================================================

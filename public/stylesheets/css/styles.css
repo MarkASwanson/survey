@@ -420,22 +420,20 @@ table {
   border-radius: 50%; }
 
 /* line 1, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
-.fade-enter {
+.fade-enter, .fade-appear {
   opacity: 0.01; }
+  /* line 3, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+  .fade-enter.fade-enter-active, .fade-enter.fade-appear, .fade-appear.fade-enter-active, .fade-appear.fade-appear {
+    opacity: 1;
+    transition: opacity 500ms ease-in; }
 
-/* line 5, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in; }
-
-/* line 10, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+/* line 9, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
 .fade-leave {
   opacity: 1; }
-
-/* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
-.fade-leave.fade-leave-active {
-  opacity: 0.01;
-  transition: opacity 500ms ease-in; }
+  /* line 11, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_transitions.scss */
+  .fade-leave.fade-leave-active {
+    opacity: 0.01;
+    transition: opacity 500ms ease-in; }
 
 /* line 63, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_grid.scss */
 .row {

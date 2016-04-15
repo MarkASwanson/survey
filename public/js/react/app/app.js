@@ -107,6 +107,8 @@ define("app/Answer", ["require", "exports", "novumware"], function (require, exp
                 this.question_id = Number(data.question_id);
             if (data.answer_text)
                 this.answer_text = data.answer_text;
+            if (data.order)
+                this.order = Number(data.order);
             _super.prototype.updateData.call(this, data);
         };
         return AnswerModel;
@@ -140,7 +142,7 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
             var answers = this.props.question.answers.map(function (answer) {
                 return React.createElement(Answers, {key: answer.id, answer: answer, selectAction: this.handleAnswerSelect.bind(this)});
             }, this);
-            return (React.createElement("div", null, React.createElement("h2", null, this.props.question.question_text), React.createElement("form", {className: "NWForm:json", method: "post", action: '/questions/' + this.props.question.id + '/submit', "data-nwform-successcb": "onQuestionAnswered"}, React.createElement("ul", {className: "list-style-none"}, answers), React.createElement("button", {type: "submit", disabled: this.props.question.selected_answer_id ? '' : 'disabled'}, this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'))));
+            return (React.createElement("div", null, React.createElement("h2", null, this.props.question.question_text), React.createElement("form", {className: "NWForm:json", method: "post", action: '/questions/' + this.props.question.id + '/submit', "data-nwform-successcb": "onQuestionAnswered"}, React.createElement(React.addons.CSSTransitionGroup, {component: "ul", className: "list-style-none", transitionName: "fade", transitionEnterTimeout: 500, transitionLeaveTimeout: 500}, answers), React.createElement("button", {type: "submit", disabled: this.props.question.selected_answer_id ? '' : 'disabled'}, this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'))));
         };
         return Question;
     }(React.Component));
@@ -189,6 +191,8 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
                     newAnswer.bind('change', this.onAnswersChange.bind(this));
                     this._answers.push(newAnswer);
                 }
+                // sort answers
+                this._answers.sort(function (a, b) { return a.order - b.order; });
                 this.trigger('change');
             },
             enumerable: true,
@@ -282,6 +286,10 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
         function SubmissionStats() {
             _super.apply(this, arguments);
         }
+        SubmissionStats.prototype.componentDidMound = function () {
+            // sort submission stats based on answer order
+            // this.props.submissionStats.sort((a: SubmissionStatModel, b: SubmissionStatModel) => { return a.answer_order - b.answer_order; });
+        };
         SubmissionStats.prototype.render = function () {
             var _this = this;
             var totalSubmissionCount = 0;
@@ -296,7 +304,7 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
                 var selectedAnswerElmt = React.createElement("span", {className: "selectedAnswerText"}, (isCorrectRow) ? 'Great!' : 'Oops...', " You answered ", React.createElement("i", {className: "icon-chevron-right no-float"}), " ");
                 return (React.createElement("li", {key: submissionStat.id, className: ((isCorrectRow) ? 'positive' : 'negative') + ' borderless'}, (isSelectedAnswer) ? selectedAnswerElmt : '', React.createElement("strong", null, "(", submissionStat.count, ") "), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, React.createElement("i", {className: ((isCorrectRow) ? 'icon-checkmark' : 'icon-cancel') + ' no-float'}), " ", submissionStat.answer_text)));
             });
-            return (React.createElement("ul", {className: "submissionStats list-style-none"}, submissionStatRows));
+            return (React.createElement(React.addons.CSSTransitionGroup, {component: "ul", className: "submissionStats list-style-none", transitionName: "fade", transitionEnterTimeout: 500, transitionLeaveTimeout: 500}, submissionStatRows));
         };
         return SubmissionStats;
     }(React.Component));
@@ -318,6 +326,8 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
                 this.answer_text = data.answer_text;
             if (data.count)
                 this.count = Number(data.count);
+            if (data.answer_order)
+                this.answer_order = Number(data.answer_order);
             _super.prototype.updateData.call(this, data);
         };
         return SubmissionStatModel;
@@ -408,6 +418,8 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
                     submissionStat.bind('change', this.onSubmissionStatsChange.bind(this));
                     this._submissions.push(submissionStat);
                 }
+                // sort submission stats based on answer order
+                this._submissions.sort(function (a, b) { return a.answer_order - b.answer_order; });
                 this.trigger('change');
             },
             enumerable: true,
