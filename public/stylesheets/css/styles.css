@@ -1701,35 +1701,28 @@ ul.nav {
 .well hr {
   border-top-color: #eeeeee; }
 
-/* line 56, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+/* line 54, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
 .panel {
   margin-bottom: 10px;
   background-color: #eeeeee;
   border-radius: 4px;
   box-shadow: 1px 2px 2px 0px rgba(0, 0, 0, 0.275);
-  padding: 0px;
+  padding: 20px;
   color: #333333;
   border: 1px solid #d5d5d5; }
   /* line 8, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
   .panel:not(:first-child) {
     margin-top: 10px; }
   /* line 9, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
-  .panel > * {
-    padding: 10px; }
-    /* line 15, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/bourbon/addons/_clearfix.scss */
-    .panel > *:after {
-      content: "";
-      display: table;
-      clear: both; }
-  /* line 13, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
-  .panel > h1, .panel > h2, .panel > h3, .panel > h4, .panel > h5, .panel > h6 {
+  .panel > h1:first-child, .panel > h2:first-child, .panel > h3:first-child, .panel > h4:first-child, .panel > h5:first-child, .panel > h6:first-child {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    margin: 0px;
+    margin: -20px;
+    margin-bottom: 20px;
     padding: 10px 10px 10px 15px;
     font-size: 18px;
     text-align: left; }
-  /* line 20, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  /* line 17, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
   .panel > .panel-footer {
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -1737,18 +1730,19 @@ ul.nav {
     border-top-right-radius: 0px;
     padding: 10px 15px;
     border: none;
-    margin: 0px; }
-    /* line 26, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+    margin: -20px;
+    margin-top: 20px; }
+    /* line 24, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
     .panel > .panel-footer.pre {
       max-height: none;
       overflow-y: auto; }
-  /* line 40, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
-  .panel > h1, .panel > h2, .panel > h3, .panel > h4, .panel > h5, .panel > h6 {
-    color: #BE640B;
+  /* line 38, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > h1:first-child, .panel > h2:first-child, .panel > h3:first-child, .panel > h4:first-child, .panel > h5:first-child, .panel > h6:first-child {
+    color: #955B00;
     background-color: #d5d5d5;
     border-bottom: 1px solid #d5d5d5; }
-  /* line 45, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
-  .panel .panel-footer {
+  /* line 43, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_panels.scss */
+  .panel > .panel-footer {
     color: #333333;
     background-color: #d5d5d5;
     border-top: 1px solid #d5d5d5; }
@@ -1822,7 +1816,7 @@ ul.nav {
   border-style: solid;
   border-radius: 4px;
   color: #eeeeee;
-  background: #BE640B;
+  background: #955B00;
   border-color: #d5d5d5;
   font-size: 16px; }
   /* line 59, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
@@ -1847,11 +1841,11 @@ ul.nav {
   button:active, button:focus
   button:active {
     color: #eeeeee;
-    background-color: #e5780d;
+    background-color: #be7400;
     border-color: #b6b6b6; }
   /* line 14, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
   .btn[disabled], button[disabled], .btn[disabled]:hover, button[disabled]:hover, .btn[disabled]:focus, button[disabled]:focus, .btn[disabled]:active, button[disabled]:active {
-    background-color: #BE640B;
+    background-color: #955B00;
     border-color: #d5d5d5; }
 
 /* line 81, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_buttons.scss */
@@ -2430,7 +2424,7 @@ pre {
 code {
   padding: 5px;
   font-size: 14px;
-  color: #BE640B;
+  color: #955B00;
   background: #d5d5d5;
   border-radius: 4px; }
 
@@ -2673,27 +2667,27 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 58, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h1 {
-  color: #BE640B; }
+  color: #955B00; }
 
 /* line 59, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h2 {
-  color: #e97b0e; }
+  color: #c37700; }
 
 /* line 60, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h3 {
-  color: #f39232; }
+  color: #f19300; }
 
 /* line 61, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h4 {
-  color: #f6a95d; }
+  color: #ffa820; }
 
 /* line 62, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h5 {
-  color: #f8c088; }
+  color: #ffba4e; }
 
 /* line 63, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 h6 {
-  color: #fbd7b4; }
+  color: #ffcc7c; }
 
 /* line 65, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
 header > h1 {
@@ -3337,26 +3331,89 @@ form .nw-loadingImage .icon-loading {
   padding: 10px; }
   /* line 12, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Tip/stylesheets/scss/nwTip.scss */
   #nw-tip #nw-tip-title {
-    color: #ee7d0e;
+    color: #c87a00;
     font-weight: bold; }
   /* line 16, ../../../vendor/markisacat/novumware-module/public/js/mootools/NovumWare/Tip/stylesheets/scss/nwTip.scss */
   #nw-tip #nw-tip-html {
     color: #eeeeee; }
 
-/* line 12, ../scss/styles.scss */
+/* line 14, ../scss/styles.scss */
 body {
   padding-top: 50px; }
 
-/* line 14, ../scss/styles.scss */
+/* line 16, ../scss/styles.scss */
 header.navbar {
   position: fixed;
   border-radius: 0px;
   z-index: 1030; }
 
-/* line 24, ../scss/styles.scss */
+/* line 18, ../scss/styles.scss */
 ul.nav.nav-auth {
   display: inline-block;
   float: right;
   margin: 5px 5px 0px 0px; }
+
+/* line 26, ../scss/styles.scss */
+#survey {
+  text-align: center;
+  padding-top: 30px; }
+  /* line 30, ../scss/styles.scss */
+  #survey section {
+    display: inline-block; }
+  /* line 34, ../scss/styles.scss */
+  #survey form {
+    text-align: center; }
+    /* line 37, ../scss/styles.scss */
+    #survey form ul {
+      text-align: left; }
+      /* line 39, ../scss/styles.scss */
+      #survey form ul li {
+        margin: 5px 0px; }
+    /* line 44, ../scss/styles.scss */
+    #survey form button {
+      margin-top: 15px; }
+
+/* line 50, ../scss/styles.scss */
+.submissionStats {
+  display: inline-block;
+  text-align: left; }
+  /* line 54, ../scss/styles.scss */
+  .submissionStats .count {
+    width: 30px;
+    display: inline-block;
+    text-align: right; }
+  /* line 60, ../scss/styles.scss */
+  .submissionStats .fullBar {
+    background-color: #CECBD2;
+    width: 150px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 0px 5px;
+    position: relative;
+    text-align: center; }
+  /* line 74, ../scss/styles.scss */
+  .submissionStats .percentBar {
+    background-color: #F4BB5F;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px; }
+  /* line 82, ../scss/styles.scss */
+  .submissionStats .percentText {
+    font-size: 0.8em;
+    margin-bottom: 3px;
+    display: inline-block;
+    vertical-align: middle; }
+  /* line 89, ../scss/styles.scss */
+  .submissionStats .selectedAnswerText {
+    position: absolute;
+    width: 200px;
+    left: -220px;
+    text-align: right;
+    padding-right: 5px; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -38,8 +38,8 @@ export class Question extends React.Component<IQuestionProps, IQuestionState> {
 		}, this);
 
 		return (
-	        <div>
-				<h2>{this.props.question.question_text}</h2>
+	        <section className="panel">
+				<h1>{this.props.question.question_text}</h1>
 				<form className="NWForm:json" method="post" action={'/questions/' + this.props.question.id + '/submit'} data-nwform-successcb="onQuestionAnswered">
 					<React.addons.CSSTransitionGroup component="ul" className="list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
 						{answers}
@@ -48,7 +48,7 @@ export class Question extends React.Component<IQuestionProps, IQuestionState> {
 						{this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'}
 					</button>
 				</form>
-			</div>
+			</section>
 		);
 	}
 }

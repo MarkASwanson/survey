@@ -32,7 +32,7 @@ Tech:
 
 √ The submission and results should be displayed without refreshing the webpage. I.E. using Ajax.
 
-The rendered HTML should be semantic and page should have a good user experience based on best practices.
+√ The rendered HTML should be semantic and page should have a good user experience based on best practices.
 
  
 
@@ -48,7 +48,7 @@ question text
 
  
 
-Survey Question Answer Structure
+√ Survey Question Answer Structure
 
 ================
 

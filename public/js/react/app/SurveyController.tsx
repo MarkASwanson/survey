@@ -19,6 +19,7 @@ export class SurveyController extends React.Component<ISurveyControllerProps, IS
 	state: ISurveyControllerState = {
 		// answeredQuestion: new QuestionModel({
 		// 	id:	1,
+		// 	question_text:	"What is your favourite color?",
 		// 	selected_answer_id: 1,
 		// 	correct_answer_id: 1
 		// })

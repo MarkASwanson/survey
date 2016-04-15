@@ -59,9 +59,11 @@ export class SubmissionStatsController extends React.Component<ISubmissionStatsC
 	render() {
 		return (
 			<div>
-				<h1>Check Out The Results!</h1>	   
-				<h2>{this.state.question.question_text}</h2>
-				<SubmissionStats question={this.state.question} submissionStats={this.state.submissionStats} />
+				<h1>Check Out The Results!</h1>
+				<section className="panel">  
+					<h1>{this.state.question.question_text}</h1>
+					<SubmissionStats question={this.state.question} submissionStats={this.state.submissionStats} />
+				</section>
 	        </div>
         )
 	}

@@ -13,11 +13,6 @@ interface ISubmissionStatsProps {
 interface ISubmissionStatsState {}
 
 export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISubmissionStatsState> {
-	componentDidMound() {
-		// sort submission stats based on answer order
-		// this.props.submissionStats.sort((a: SubmissionStatModel, b: SubmissionStatModel) => { return a.answer_order - b.answer_order; });
-	}
-
 	render() {
 		var totalSubmissionCount = 0;
 		for (var submissionStat of this.props.submissionStats) totalSubmissionCount += submissionStat.count;
@@ -27,12 +22,12 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			var isSelectedAnswer = (this.props.question.selected_answer_id == submissionStat.answer_id);
 			var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
 
-			var selectedAnswerElmt = <span className="selectedAnswerText">{(isCorrectRow)?'Great!':'Oops...'} You answered <i className="icon-chevron-right no-float"></i> </span>;
+			var selectedAnswerElmt = <span className="selectedAnswerText">{(isCorrectRow)?'Well done!':'Bummer...'} You answered <i className="icon-chevron-right no-float"></i> </span>;
 
 			return (
 				<li key={submissionStat.id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
 					{(isSelectedAnswer) ? selectedAnswerElmt : ''}
-					<strong>({submissionStat.count}) </strong>
+					<span className="count">({submissionStat.count}) </span>
 					<div className="fullBar">
 						<div className="percentBar" style={{ width: percent + '%' }}></div>
 						<span className="percentText">{percent}%</span>

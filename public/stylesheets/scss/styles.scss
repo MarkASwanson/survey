@@ -1,25 +1,19 @@
 // ============================================== NOVUMWARE VARIABLE OVERRIDES ===============================================
+$color-accent:	#955B00;
+
+$panel-padding: 20px;
+
+// ============================================== NOVUMWARE ===============================================
+@import '../../../vendor/markisacat/novumware-module/public/stylesheets/scss/nwMain.scss';
 
 
-// ============================================== NOVUMWARE STYLES ===============================================
-@import '../../../vendor/markisacat/novumware-module/public/stylesheets/scss/nwMain.scss'; // NOVUMWARE STYLES
-
-
-// ============================================== PROJECT STYLES ===============================================
+// ============================================== PROJECT ===============================================
 
 
 // ============================================== LAYOUT ===============================================
 body { padding-top:	$navbar-height; }
 
 header.navbar { @include	navbar-type-fixed-top; }
-
-// h2:before {
-// 	display:	block;
-// 	content:	"";
-// 	margin-top:	-($navbar-height + $margin);
-// 	height:		$navbar-height + $margin;
-// 	visibility:	hidden;
-// }
 
 ul.nav.nav-auth {
 	display:	inline-block;
@@ -28,4 +22,78 @@ ul.nav.nav-auth {
 }
 
 
-// ============================================== MODULE STYLES ===============================================
+// ============================================== SURVEY ===============================================
+#survey {
+	text-align:		center;
+	padding-top:	30px;
+	
+	section {
+		display:	inline-block;
+	}
+
+	form {
+		text-align:	center;
+
+		ul {
+			text-align:	left;
+			li {
+				margin:	$padding-small 0px;
+			}
+		}
+
+		button {
+			margin-top:	$margin-large;
+		}
+	}
+}
+
+.submissionStats {
+	display:	inline-block;
+	text-align:	left;
+
+	.count {
+		width:		30px;
+		display:	inline-block;
+		text-align:	right;
+	}
+
+	.fullBar {
+		background-color:	#CECBD2;
+		width:				150px;
+		height:				20px;
+		display:			inline-block;
+		vertical-align:		middle;
+		border:				1px;
+		border-radius:		2px;
+		overflow:			hidden;
+		margin:				0px $margin-small;
+		position:			relative;
+		text-align:			center;
+	}
+
+	.percentBar {
+		background-color:	#F4BB5F;
+		position:			absolute;
+		left:				0px;
+		top:				0px;
+		bottom:				0px;
+	}
+
+	.percentText {
+		font-size:		0.8em;
+		margin-bottom:	3px;
+		display:		inline-block;
+		vertical-align:	middle;
+	}
+
+	.selectedAnswerText {
+		position:		absolute;
+		width:			200px;
+		left:			-220px;
+		text-align:		right;
+		padding-right:	$padding-small;
+	}
+}
+
+
+// ============================================== MODULES ===============================================
