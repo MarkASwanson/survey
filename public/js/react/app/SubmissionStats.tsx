@@ -14,6 +14,8 @@ interface ISubmissionStatsState {}
 
 export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISubmissionStatsState> {
 	render() {
+		var selectedAnswerText = '';
+
 		var totalSubmissionCount = 0;
 		for (var submissionStat of this.props.submissionStats) totalSubmissionCount += submissionStat.count;
 
@@ -22,7 +24,8 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			var isSelectedAnswer = (this.props.question.selected_answer_id == submissionStat.answer_id);
 			var percent = Math.round(submissionStat.count / totalSubmissionCount * 100) || 0;
 
-			var selectedAnswerElmt = <span className="selectedAnswerText"><span className="text">{(isCorrectRow)?'Well done!':'Bummer...'} You answered</span> <i className="icon-chevron-right no-float"></i> </span>;
+			var selectedAnswerElmt = <span className={((isCorrectRow) ? 'positive' : 'negative') + ' selectedAnswerText tablet-andLarger'}><span className="text">{(isCorrectRow) ? 'Well done!' : 'Bummer...'} You chose</span> <i className="icon-chevron-right no-float"></i></span>;
+			if (isSelectedAnswer) selectedAnswerText = submissionStat.answer_text;
 
 			return (
 				<li key={submissionStat.answer_id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
@@ -37,10 +40,14 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			);
 		});
 
+		var isAnswerCorrect = (this.props.question.selected_answer_id == this.props.question.correct_answer_id);
 		return (
-			<React.addons.CSSTransitionGroup component="ul" className="submissionStats list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-				{submissionStatRows}
-			</React.addons.CSSTransitionGroup>
+			<div>
+				<div className={((isAnswerCorrect) ? 'positive' : 'negative') + ' selectedAnswerText alert phone-andSmaller'}><span className="text">{(isAnswerCorrect) ? 'Well done!' : 'Bummer...'} You chose</span> <span className="answer">"{selectedAnswerText}"</span></div>
+				<React.addons.CSSTransitionGroup component="ul" className="submissionStats list-style-none" transitionName="fade" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
+					{submissionStatRows}
+				</React.addons.CSSTransitionGroup>
+			</div>
         )
 	}
 }

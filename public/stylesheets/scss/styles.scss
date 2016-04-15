@@ -49,9 +49,22 @@ ul.nav.nav-auth {
 			margin-top:	$margin-large;
 		}
 	}
-}
 
-.submissionStats {
+	.selectedAnswerText {
+		&.alert {
+			padding:	$padding-small;
+		}
+		
+		@include	tablet-andLarger {
+			position:		absolute;
+			width:			210px;
+			left:			-230px;
+			text-align:		right;
+			padding-right:	$padding-small;
+		}
+	}
+	
+	.submissionStats {
 	display:	inline-block;
 	text-align:	left;
 
@@ -93,22 +106,7 @@ ul.nav.nav-auth {
 		display:		inline-block;
 		vertical-align:	middle;
 	}
-
-	.selectedAnswerText {
-		position:		absolute;
-		width:			210px;
-		left:			-230px;
-		text-align:		right;
-		padding-right:	$padding-small;
-
-		@include	phone-andSmaller {
-			left:	-205px;
-
-			.text {
-				display:	none;
-			}
-		}
-	}
+}
 }
 
 

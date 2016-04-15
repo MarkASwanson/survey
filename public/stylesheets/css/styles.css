@@ -1163,7 +1163,7 @@ table {
   .alert.negative a {
     color: #953b39; }
 
-/* line 22, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
+/* line 38, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_alerts.scss */
 .alert {
   padding: 15px;
   margin-bottom: 15px;
@@ -3375,58 +3375,54 @@ ul.nav.nav-auth {
     /* line 48, ../scss/styles.scss */
     #survey form button {
       margin-top: 15px; }
-
-/* line 54, ../scss/styles.scss */
-.submissionStats {
-  display: inline-block;
-  text-align: left; }
-  /* line 58, ../scss/styles.scss */
-  .submissionStats li {
-    white-space: nowrap; }
-  /* line 62, ../scss/styles.scss */
-  .submissionStats .count {
-    width: 30px;
+  /* line 54, ../scss/styles.scss */
+  #survey .selectedAnswerText.alert {
+    padding: 5px; }
+  @media (min-width: 760px) {
+    /* line 53, ../scss/styles.scss */
+    #survey .selectedAnswerText {
+      position: absolute;
+      width: 210px;
+      left: -230px;
+      text-align: right;
+      padding-right: 5px; } }
+  /* line 67, ../scss/styles.scss */
+  #survey .submissionStats {
     display: inline-block;
-    text-align: right; }
-  /* line 68, ../scss/styles.scss */
-  .submissionStats .fullBar {
-    background-color: #CECBD2;
-    width: 150px;
-    height: 20px;
-    display: inline-block;
-    vertical-align: middle;
-    border: 1px;
-    border-radius: 2px;
-    overflow: hidden;
-    margin: 0px 5px;
-    position: relative;
-    text-align: center; }
-  /* line 82, ../scss/styles.scss */
-  .submissionStats .percentBar {
-    background-color: #F4BB5F;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    bottom: 0px; }
-  /* line 90, ../scss/styles.scss */
-  .submissionStats .percentText {
-    font-size: 0.8em;
-    margin-bottom: 3px;
-    display: inline-block;
-    vertical-align: middle; }
-  /* line 97, ../scss/styles.scss */
-  .submissionStats .selectedAnswerText {
-    position: absolute;
-    width: 210px;
-    left: -230px;
-    text-align: right;
-    padding-right: 5px; }
-    @media (max-width: 759px) {
-      /* line 97, ../scss/styles.scss */
-      .submissionStats .selectedAnswerText {
-        left: -205px; }
-        /* line 107, ../scss/styles.scss */
-        .submissionStats .selectedAnswerText .text {
-          display: none; } }
+    text-align: left; }
+    /* line 71, ../scss/styles.scss */
+    #survey .submissionStats li {
+      white-space: nowrap; }
+    /* line 75, ../scss/styles.scss */
+    #survey .submissionStats .count {
+      width: 30px;
+      display: inline-block;
+      text-align: right; }
+    /* line 81, ../scss/styles.scss */
+    #survey .submissionStats .fullBar {
+      background-color: #CECBD2;
+      width: 150px;
+      height: 20px;
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px;
+      border-radius: 2px;
+      overflow: hidden;
+      margin: 0px 5px;
+      position: relative;
+      text-align: center; }
+    /* line 95, ../scss/styles.scss */
+    #survey .submissionStats .percentBar {
+      background-color: #F4BB5F;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      bottom: 0px; }
+    /* line 103, ../scss/styles.scss */
+    #survey .submissionStats .percentText {
+      font-size: 0.8em;
+      margin-bottom: 3px;
+      display: inline-block;
+      vertical-align: middle; }
 
 /*# sourceMappingURL=styles.css.map */

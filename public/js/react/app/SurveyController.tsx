@@ -20,8 +20,8 @@ export class SurveyController extends React.Component<ISurveyControllerProps, IS
 		// answeredQuestion: new QuestionModel({
 		// 	id:	2,
 		// 	question_text:	"What is your favourite color?",
-		// 	selected_answer_id: 1,
-		// 	correct_answer_id: 2
+		// 	selected_answer_id: 6,
+		// 	correct_answer_id: 9
 		// })
 	};
 

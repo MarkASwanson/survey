@@ -288,6 +288,7 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
         }
         SubmissionStats.prototype.render = function () {
             var _this = this;
+            var selectedAnswerText = '';
             var totalSubmissionCount = 0;
             for (var _i = 0, _a = this.props.submissionStats; _i < _a.length; _i++) {
                 var submissionStat = _a[_i];
@@ -297,10 +298,13 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
                 var isCorrectRow = (submissionStat.answer_id == _this.props.question.correct_answer_id);
                 var isSelectedAnswer = (_this.props.question.selected_answer_id == submissionStat.answer_id);
                 var percent = Math.round(submissionStat.count / totalSubmissionCount * 100) || 0;
-                var selectedAnswerElmt = React.createElement("span", {className: "selectedAnswerText"}, React.createElement("span", {className: "text"}, (isCorrectRow) ? 'Well done!' : 'Bummer...', " You answered"), " ", React.createElement("i", {className: "icon-chevron-right no-float"}), " ");
+                var selectedAnswerElmt = React.createElement("span", {className: ((isCorrectRow) ? 'positive' : 'negative') + ' selectedAnswerText tablet-andLarger'}, React.createElement("span", {className: "text"}, (isCorrectRow) ? 'Well done!' : 'Bummer...', " You chose"), " ", React.createElement("i", {className: "icon-chevron-right no-float"}));
+                if (isSelectedAnswer)
+                    selectedAnswerText = submissionStat.answer_text;
                 return (React.createElement("li", {key: submissionStat.answer_id, className: ((isCorrectRow) ? 'positive' : 'negative') + ' borderless'}, (isSelectedAnswer) ? selectedAnswerElmt : '', React.createElement("span", {className: "count"}, "(", submissionStat.count, ") "), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, React.createElement("i", {className: ((isCorrectRow) ? 'icon-checkmark' : 'icon-cancel') + ' no-float'}), " ", submissionStat.answer_text)));
             });
-            return (React.createElement(React.addons.CSSTransitionGroup, {component: "ul", className: "submissionStats list-style-none", transitionName: "fade", transitionEnterTimeout: 500, transitionLeaveTimeout: 500}, submissionStatRows));
+            var isAnswerCorrect = (this.props.question.selected_answer_id == this.props.question.correct_answer_id);
+            return (React.createElement("div", null, React.createElement("div", {className: ((isAnswerCorrect) ? 'positive' : 'negative') + ' selectedAnswerText alert phone-andSmaller'}, React.createElement("span", {className: "text"}, (isAnswerCorrect) ? 'Well done!' : 'Bummer...', " You chose"), " ", React.createElement("span", {className: "answer"}, "\"", selectedAnswerText, "\"")), React.createElement(React.addons.CSSTransitionGroup, {component: "ul", className: "submissionStats list-style-none", transitionName: "fade", transitionEnterTimeout: 500, transitionLeaveTimeout: 500}, submissionStatRows)));
         };
         return SubmissionStats;
     }(React.Component));
