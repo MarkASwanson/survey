@@ -51,6 +51,10 @@ ul.nav.nav-auth {
 	display:	inline-block;
 	text-align:	left;
 
+	li {
+		white-space:	nowrap;
+	}
+
 	.count {
 		width:		30px;
 		display:	inline-block;
@@ -84,6 +88,10 @@ ul.nav.nav-auth {
 		margin-bottom:	3px;
 		display:		inline-block;
 		vertical-align:	middle;
+	}
+
+	.answerText {
+		// white-space:	nowrap;
 	}
 
 	.selectedAnswerText {
