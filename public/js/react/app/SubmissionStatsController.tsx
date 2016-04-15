@@ -72,8 +72,6 @@ export class SubmissionStatsController extends React.Component<ISubmissionStatsC
 
 // =========================================== SubmissionStats Store ==========================================
 class SubmissionStatsStore extends NovumWare.AbstractStore {
-	// question_id: number;
-
 	// === QuestionModel ===
 	private _question: QuestionModel = new QuestionModel();
 	get question() { return this._question; }
