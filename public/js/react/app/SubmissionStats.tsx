@@ -19,10 +19,14 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 
 		var submissionStatRows = this.props.submissionStats.map((submissionStat) => {
 			var isCorrectRow = (submissionStat.answer_id == this.props.question.correct_answer_id);
+			var isSelectedAnswer = (this.props.question.selected_answer_id == submissionStat.answer_id);
 			var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
+
+			var selectedAnswerElmt = <span className="selectedAnswerText">{(isCorrectRow)?'Great!':'Oops...'} You answered <i className="icon-chevron-right no-float"></i> </span>;
 
 			return (
 				<li key={submissionStat.id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
+					{(isSelectedAnswer) ? selectedAnswerElmt : ''}
 					<strong>({submissionStat.count}) </strong>
 					<div className="fullBar">
 						<div className="percentBar" style={{ width: percent + '%' }}></div>

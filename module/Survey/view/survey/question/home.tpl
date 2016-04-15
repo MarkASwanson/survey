@@ -71,8 +71,11 @@
 		vertical-align:	middle;
 	}
 
-	/*.submissionStats .answerText {
-		white-space:	nowrap;
-		text-overflow:	ellipsis;
-	}*/
+	.submissionStats .selectedAnswerText {
+		position:		absolute;
+		width:			200px;
+		left:			-200px;
+		text-align:		right;
+		padding-right:	5px;
+	}
 </style>

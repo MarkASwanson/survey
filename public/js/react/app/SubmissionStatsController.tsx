@@ -9,6 +9,7 @@ declare var NWRequest;
 // =========================================== SubmissionStats Controller ==========================================
 interface ISubmissionStatsControllerProps {
 	question_id: number;
+	question?: QuestionModel;
 }
 
 interface ISubmissionStatsControllerState {
@@ -27,11 +28,14 @@ export class SubmissionStatsController extends React.Component<ISubmissionStatsC
 	componentDidMount() {
 		this.submissionStatsStore.bind('change', this.onSubmissionStatsStoreChange.bind(this));
 
-		// load the question
-		new NWRequest.JSON({
-			url: '/questions/'+this.props.question_id,
-			onSuccess: (response)=>{ this.submissionStatsStore.question = response.question; }
-		});
+		// possibly load the question
+		if (this.props.question.id) this.submissionStatsStore.question = this.props.question;
+		else {
+			new NWRequest.JSON({
+				url: '/questions/' + this.props.question_id,
+				onSuccess: (response) => { this.submissionStatsStore.question = response.question; }
+			});
+		}
 
 		// load the submission stats
 		new NWRequest.JSON({

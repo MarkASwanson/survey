@@ -291,8 +291,10 @@ define("app/SubmissionStats", ["require", "exports", "novumware"], function (req
             }
             var submissionStatRows = this.props.submissionStats.map(function (submissionStat) {
                 var isCorrectRow = (submissionStat.answer_id == _this.props.question.correct_answer_id);
+                var isSelectedAnswer = (_this.props.question.selected_answer_id == submissionStat.answer_id);
                 var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
-                return (React.createElement("li", {key: submissionStat.id, className: ((isCorrectRow) ? 'positive' : 'negative') + ' borderless'}, React.createElement("strong", null, "(", submissionStat.count, ") "), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, React.createElement("i", {className: ((isCorrectRow) ? 'icon-checkmark' : 'icon-cancel') + ' no-float'}), " ", submissionStat.answer_text)));
+                var selectedAnswerElmt = React.createElement("span", {className: "selectedAnswerText"}, (isCorrectRow) ? 'Great!' : 'Oops...', " You answered ", React.createElement("i", {className: "icon-chevron-right no-float"}), " ");
+                return (React.createElement("li", {key: submissionStat.id, className: ((isCorrectRow) ? 'positive' : 'negative') + ' borderless'}, (isSelectedAnswer) ? selectedAnswerElmt : '', React.createElement("strong", null, "(", submissionStat.count, ") "), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, React.createElement("i", {className: ((isCorrectRow) ? 'icon-checkmark' : 'icon-cancel') + ' no-float'}), " ", submissionStat.answer_text)));
             });
             return (React.createElement("ul", {className: "submissionStats list-style-none"}, submissionStatRows));
         };
@@ -337,11 +339,15 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
         SubmissionStatsController.prototype.componentDidMount = function () {
             var _this = this;
             this.submissionStatsStore.bind('change', this.onSubmissionStatsStoreChange.bind(this));
-            // load the question
-            new NWRequest.JSON({
-                url: '/questions/' + this.props.question_id,
-                onSuccess: function (response) { _this.submissionStatsStore.question = response.question; }
-            });
+            // possibly load the question
+            if (this.props.question.id)
+                this.submissionStatsStore.question = this.props.question;
+            else {
+                new NWRequest.JSON({
+                    url: '/questions/' + this.props.question_id,
+                    onSuccess: function (response) { _this.submissionStatsStore.question = response.question; }
+                });
+            }
             // load the submission stats
             new NWRequest.JSON({
                 url: '/questions/' + this.props.question_id + '/submission-stats',
@@ -414,18 +420,13 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
         return SubmissionStatsStore;
     }(NovumWare.AbstractStore));
 });
-define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController", "app/Question"], function (require, exports, SubmissionStatsController_1, QuestionController_1, Question_4) {
+define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController"], function (require, exports, SubmissionStatsController_1, QuestionController_1) {
     "use strict";
     var SurveyController = (function (_super) {
         __extends(SurveyController, _super);
         function SurveyController() {
             _super.apply(this, arguments);
-            this.state = {
-                answeredQuestion: new Question_4.QuestionModel({
-                    correct_answer_id: 1,
-                    selected_answer_id: 2
-                })
-            };
+            this.state = {};
         }
         SurveyController.prototype.handleQuestionSubmitSuccess = function (question) {
             console.log('SurveyController.handleQuestionSubmitSuccess');
@@ -434,9 +435,9 @@ define("app/SurveyController", ["require", "exports", "app/SubmissionStatsContro
             });
         };
         SurveyController.prototype.render = function () {
-            var submissionStatsController = React.createElement(SubmissionStatsController_1.SubmissionStatsController, {question_id: this.props.question_id});
-            var questionController = React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id, submitSuccessAction: this.handleQuestionSubmitSuccess.bind(this)});
-            var displayedPage = (this.state.answeredQuestion) ? submissionStatsController : questionController;
+            var displayedPage = (this.state.answeredQuestion) ?
+                React.createElement(SubmissionStatsController_1.SubmissionStatsController, {question: this.state.answeredQuestion, question_id: this.state.answeredQuestion.id || this.props.question_id}) :
+                React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id, submitSuccessAction: this.handleQuestionSubmitSuccess.bind(this)});
             return (React.createElement("div", null, displayedPage));
         };
         return SurveyController;

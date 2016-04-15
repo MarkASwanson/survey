@@ -16,12 +16,7 @@ interface ISurveyControllerState {
 }
 
 export class SurveyController extends React.Component<ISurveyControllerProps, ISurveyControllerState> {
-	state: ISurveyControllerState = {
-		answeredQuestion: new QuestionModel({
-			correct_answer_id: 1,
-			selected_answer_id: 2
-		})
-	};
+	state: ISurveyControllerState = {};
 
 	handleQuestionSubmitSuccess(question:QuestionModel) {
 		console.log('SurveyController.handleQuestionSubmitSuccess');
@@ -31,10 +26,9 @@ export class SurveyController extends React.Component<ISurveyControllerProps, IS
 	}
 
 	render() {
-		var submissionStatsController = <SubmissionStatsController question_id={this.props.question_id} />;
-		var questionController = <QuestionController question_id={this.props.question_id} submitSuccessAction={this.handleQuestionSubmitSuccess.bind(this)} />;
-
-		var displayedPage = (this.state.answeredQuestion) ? submissionStatsController : questionController;
+		var displayedPage = (this.state.answeredQuestion) ?
+			<SubmissionStatsController question={this.state.answeredQuestion} question_id={this.state.answeredQuestion.id || this.props.question_id} /> :
+			<QuestionController question_id={this.props.question_id} submitSuccessAction={this.handleQuestionSubmitSuccess.bind(this) } />;
 
 		return (
 	        <div>
