@@ -1,11 +1,11 @@
 <?php
 namespace Survey\Model;
 
-class QuestionModel extends \NovumWare\Model\AbstractModel {
+class SubmissionStatModel extends \NovumWare\Model\AbstractModel {
 
-	public $id;
-	public $correct_answer_id;
-	public $question_text;
+	public $answer_id;
+	public $answer_text;
+	public $count;
 	
 	
 	// ====================================================== GET / SET ======================================================

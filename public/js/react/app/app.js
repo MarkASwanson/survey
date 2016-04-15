@@ -144,7 +144,7 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
             this.props.selectAction(inputElmt);
         };
         Answers.prototype.render = function () {
-            return (React.createElement("div", null, React.createElement("input", {type: "radio", name: "answer", value: this.props.answer.id, onChange: this.handleChange.bind(this)}), " ", this.props.answer.answer_text));
+            return (React.createElement("div", null, React.createElement("input", {type: "radio", name: "answer_id", value: this.props.answer.id, onChange: this.handleChange.bind(this)}), " ", this.props.answer.answer_text));
         };
         return Answers;
     }(React.Component));
@@ -191,6 +191,8 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
                 this.id = Number(data.id);
             if (data.question_text)
                 this.question_text = data.question_text;
+            if (data.correct_answer_id)
+                this.correct_answer_id = data.correct_answer_id;
             if (data.selected_answer_id)
                 this.selected_answer_id = data.selected_answer_id;
             _super.prototype.updateData.call(this, data);

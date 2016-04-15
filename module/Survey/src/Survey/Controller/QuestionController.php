@@ -26,6 +26,23 @@ class QuestionController extends \NovumWare\Zend\Mvc\Controller\AbstractMapperCo
 		];
 	}
 
+	function submitAction() {
+		$question_id = $this->params('id');
+		// $answer_id = $this->getRequest()->getPost('answer_id');
+
+		// $submission = $this->getSubmissionMapper()->newModelFromData();
+		// $submission->answer_id = $answer_id;
+
+		// $this->getSubmissionMapper()->insertModel($submission);
+
+		$question_id = 1;
+		$submissionStats = $this->getSubmissionStatMapper()->fetchManyWithQuestionId($question_id);
+
+		return [
+			'submissionStats'	=> $submissionStats
+		];
+	}
+
 
 	// ========================================================================= FACTORY METHODS =========================================================================
 	/**
@@ -40,5 +57,12 @@ class QuestionController extends \NovumWare\Zend\Mvc\Controller\AbstractMapperCo
 	 */
 	protected function getAnswerMapper() {
 		return $this->getServiceLocator()->get('\Survey\Mapper\AnswerMapper');
+	}
+
+	/**
+	 * @return \Survey\Mapper\SubmissionStatMapper
+	 */
+	protected function getSubmissionStatMapper() {
+		return $this->getServiceLocator()->get('\Survey\Mapper\SubmissionStatMapper');
 	}
 }

@@ -2,8 +2,7 @@
 return [	
 	'controllers' => [
 		'invokables' => [
-			'Survey\Question'	=> 'Survey\Controller\QuestionController',
-			'Survey\Answer'		=> 'Survey\Controller\AnswerController'
+			'Survey\Question'	=> 'Survey\Controller\QuestionController'
 		]
 	],
 
@@ -69,59 +68,13 @@ return [
 										'action'	=> 'answers'
 									]
 								]
-							]
-						]
-					]
-				]
-			],
-			'answers'	=> [
-			'type'		=> 'literal',
-				'options'	=> [
-					'route'		=> '/answers',
-					'defaults'	=> [
-						'controller'	=> 'Survey\Answer',
-						'action'		=> 'list'
-					]
-				],
-				'may_terminate'	=> true,
-				'child_routes'	=> [
-					'new'	=> [
-						'type'		=> 'literal',
-						'options'	=> [
-							'route'		=> '/new',
-							'defaults'	=> [
-								'action'	=> 'new'
-							]
-						]
-					],
-					'get'	=> [
-						'type'		=> 'segment',
-						'options'	=> [
-							'route'		=> '/:id',
-							'defaults'	=> [
-								'action'	=> 'get'
 							],
-							'constraints'	=> [
-								'id'	=> '[0-9]+'
-							]
-						],
-						'may_terminate'	=> true,
-						'child_routes'	=> [
-							'edit'		=> [
+							'submit'	=> [
 								'type'		=> 'literal',
 								'options'	=> [
-									'route'		=> '/edit',
+									'route'		=> '/submit',
 									'defaults'	=> [
-										'action'	=> 'edit'
-									]
-								]
-							],
-							'delete'	=> [
-								'type'		=> 'literal',
-								'options'	=> [
-									'route'		=> '/delete',
-									'defaults'	=> [
-										'action'	=> 'delete'
+										'action'	=> 'submit'
 									]
 								]
 							]

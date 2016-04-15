@@ -56,7 +56,7 @@ class Answers extends React.Component<IAnswersProps, IAnswersState> {
 	public render() {
 		return (
 			<div>
-				<input type="radio" name="answer" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> {this.props.answer.answer_text}
+				<input type="radio" name="answer_id" value={this.props.answer.id} onChange={this.handleChange.bind(this) } /> {this.props.answer.answer_text}
 			</div>
         );
 	}
@@ -67,6 +67,7 @@ class Answers extends React.Component<IAnswersProps, IAnswersState> {
 export class QuestionModel extends NovumWare.AbstractModel {
 	id: number;
 	question_text: string;
+	correct_answer_id: number;
 	selected_answer_id: number;
 
 	private _answers: AnswerModel[];
@@ -104,6 +105,7 @@ export class QuestionModel extends NovumWare.AbstractModel {
 	updateData(data) {
 		if (data.id) this.id = Number(data.id);
 		if (data.question_text) this.question_text = data.question_text;
+		if (data.correct_answer_id) this.correct_answer_id = data.correct_answer_id;
 		if (data.selected_answer_id) this.selected_answer_id = data.selected_answer_id;
 		super.updateData(data);
 	}
