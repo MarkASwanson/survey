@@ -1,14 +1,14 @@
 /// <reference path="../../typings/browser.d.ts" />
 import * as NovumWare from "../novumware";
-import {Question as Question} from "./Question";
-import {QuestionModel as QuestionModel} from "./Question";
-declare var $nw;
+import {Question} from "./Question";
+import {QuestionModel} from "./Question";
 declare var NWRequest;
 
 
 // =========================================== Question Controller ==========================================
 interface IQuestionControllerProps {
 	question_id: number;
+	submitSuccessAction?: (question:QuestionModel) => void;
 }
 
 interface IQuestionControllerState {
@@ -27,8 +27,6 @@ export class QuestionController extends React.Component<IQuestionControllerProps
 			url: '/questions/' + this.props.question_id,
 			onSuccess: (response)=>{ this.questionStore.question = response.question; }
 		});
-
-		$nw.initContainer(ReactDOM.findDOMNode(this));
 	}
 
 	componentWillUnmount() {
@@ -40,11 +38,16 @@ export class QuestionController extends React.Component<IQuestionControllerProps
 		this.setState({ question: this.questionStore.question });
 	}
 
+	handleSubmitSuccess() {
+		console.log('QuestionController.handleSubmitSuccess');
+		if (this.props.submitSuccessAction) this.props.submitSuccessAction(this.state.question);
+	}
+
 	render() {
 		return (
 			<div>
 				<h1>Stop!  Answer me this question...</h1>	   
-		        <Question question={this.state.question} />
+				<Question question={this.state.question} submitSuccessAction={this.handleSubmitSuccess.bind(this)} />
 	        </div>
         )
 	}

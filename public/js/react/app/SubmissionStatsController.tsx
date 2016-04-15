@@ -1,6 +1,8 @@
 /// <reference path="../../typings/browser.d.ts" />
 import * as NovumWare from "../novumware";
-import {QuestionModel as QuestionModel} from "./Question";
+import {QuestionModel} from "./Question";
+import {SubmissionStatModel} from "./SubmissionStats";
+import {SubmissionStats} from "./SubmissionStats";
 declare var NWRequest;
 
 
@@ -51,54 +53,13 @@ export class SubmissionStatsController extends React.Component<ISubmissionStatsC
 	}
 
 	render() {
-		var totalSubmissionCount = 0;
-		for (var submissionStat of this.state.submissionStats) totalSubmissionCount += submissionStat.count;
-
-		var submissionStats = this.state.submissionStats.map((submissionStat)=>{
-			var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
-			return (
-				<li key={submissionStat.id}>
-					<strong>({submissionStat.count})</strong>
-					<div className="fullBar">
-						<div className="percentBar" style={{width:percent+'%'}}></div>
-						<span className="percentText">{percent}%</span>
-					</div>
-					<span className="answerText">{submissionStat.answer_text}</span>
-				</li>
-	        );
-		});
-
 		return (
 			<div>
 				<h1>Check Out The Results!</h1>	   
 				<h2>{this.state.question.question_text}</h2>
-				<ul className="submissionStats list-style-none">
-					{submissionStats}
-				</ul>
+				<SubmissionStats question={this.state.question} submissionStats={this.state.submissionStats} />
 	        </div>
         )
-	}
-}
-
-
-// =========================================== Submission Stat Model ==========================================
-export class SubmissionStatModel extends NovumWare.AbstractModel {
-	id: number;
-	answer_id: number;
-	answer_text: string;
-	count: number;
-
-	constructor(data?) {
-		super();
-		if (data) this.updateData(data);
-	}
-
-	updateData(data) {
-		if (data.id) this.id = Number(data.id);
-		if (data.answer_id) this.answer_id = Number(data.answer_id);
-		if (data.answer_text) this.answer_text = data.answer_text;
-		if (data.count) this.count = Number(data.count);
-		super.updateData(data);
 	}
 }
 

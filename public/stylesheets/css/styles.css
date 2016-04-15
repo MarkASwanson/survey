@@ -2580,8 +2580,8 @@ ol li.spacer {
   padding: 0px;
   height: 22px; }
 /* line 30, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
-ul li.negative,
-ol li.negative {
+ul li.negative:not(.borderless),
+ol li.negative:not(.borderless) {
   border: 1px solid red; }
 
 /* line 33, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_misc.scss */
@@ -2727,8 +2727,8 @@ ol > li.active > a,
 ul > li.active > a {
   color: #6666ff; }
 /* line 94, ../../../vendor/markisacat/novumware-module/public/stylesheets/scss/novumWare/_base.scss */
-ol:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-'],
-ul:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-'] {
+ol:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-']:not(.no-float),
+ul:not(.list-type-horizontal):not(.list-type-boxes) > li [class*='icon-']:not(.no-float) {
   float: right;
   margin-left: 10px; }
 

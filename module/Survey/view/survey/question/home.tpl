@@ -18,14 +18,9 @@
 		);
 	});
 
-	// function onNewEmployeeSuccess(response) {
-	// 	$nw.getPlugin('Popup').close();
-	// 	employeeListController.addEmployee(response.employee);
-	// }
-
-	// function onDeleteEmployeeSuccess(elmt) {
-	// 	elmt.getParent('li').fireEvent('deleted');
-	// }
+	function onQuestionAnswered(response, questionFormElmt) {
+		questionFormElmt.fireEvent('submitSuccess');
+	}
 </script>
 
 <style type="text/css">
@@ -40,6 +35,11 @@
 	#survey form button {
 		margin-top:		10px;
 		margin-left:	16px;
+	}
+
+	.submissionStats {
+		display:	inline-block;
+		text-align:	left
 	}
 
 	.submissionStats .fullBar {

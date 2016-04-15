@@ -2,20 +2,34 @@
 import * as NovumWare from "../novumware";
 import {AnswerModel} from "./Answer";
 declare var NWRequest;
+declare var $nw;
 
 
 // =========================================== Question ==========================================
 interface IQuestionProps {
 	question: QuestionModel;
+	submitSuccessAction?: () => void;
 }
 
 interface IQuestionState {}
 
 export class Question extends React.Component<IQuestionProps, IQuestionState> {
+	componentDidMount() {
+		$nw.initContainer(ReactDOM.findDOMNode(this));
+		var domElmt = ReactDOM.findDOMNode(this);
+		var formElmt = domElmt.getElement('form');
+		formElmt.addEvent('submitSuccess', this.onSubmitSuccess.bind(this));
+	}
+
 	handleAnswerSelect(radio:HTMLInputElement) {
 		this.props.question.updateData({
 			selected_answer_id: radio.value
 		});
+	}
+
+	onSubmitSuccess() {
+		console.log('Question.onSubmitSuccess');
+		if (this.props.submitSuccessAction) this.props.submitSuccessAction();
 	}
 
 	public render() {
@@ -26,7 +40,7 @@ export class Question extends React.Component<IQuestionProps, IQuestionState> {
 		return (
 	        <div>
 				<h2>{this.props.question.question_text}</h2>
-				<form className="NWForm:json" method="post" action={'/questions/'+this.props.question.id+'/submit'}>
+				<form className="NWForm:json" method="post" action={'/questions/' + this.props.question.id + '/submit'} data-nwform-successcb="onQuestionAnswered">
 					<ul className="list-style-none">{answers}</ul>
 					<button type="submit" disabled={this.props.question.selected_answer_id ? '' : 'disabled'}>
 						{this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'}

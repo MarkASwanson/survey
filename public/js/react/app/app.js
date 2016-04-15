@@ -120,16 +120,27 @@ define("app/Question", ["require", "exports", "novumware", "app/Answer"], functi
         function Question() {
             _super.apply(this, arguments);
         }
+        Question.prototype.componentDidMount = function () {
+            $nw.initContainer(ReactDOM.findDOMNode(this));
+            var domElmt = ReactDOM.findDOMNode(this);
+            var formElmt = domElmt.getElement('form');
+            formElmt.addEvent('submitSuccess', this.onSubmitSuccess.bind(this));
+        };
         Question.prototype.handleAnswerSelect = function (radio) {
             this.props.question.updateData({
                 selected_answer_id: radio.value
             });
         };
+        Question.prototype.onSubmitSuccess = function () {
+            console.log('Question.onSubmitSuccess');
+            if (this.props.submitSuccessAction)
+                this.props.submitSuccessAction();
+        };
         Question.prototype.render = function () {
             var answers = this.props.question.answers.map(function (answer) {
                 return React.createElement(Answers, {key: answer.id, answer: answer, selectAction: this.handleAnswerSelect.bind(this)});
             }, this);
-            return (React.createElement("div", null, React.createElement("h2", null, this.props.question.question_text), React.createElement("form", {className: "NWForm:json", method: "post", action: '/questions/' + this.props.question.id + '/submit'}, React.createElement("ul", {className: "list-style-none"}, answers), React.createElement("button", {type: "submit", disabled: this.props.question.selected_answer_id ? '' : 'disabled'}, this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'))));
+            return (React.createElement("div", null, React.createElement("h2", null, this.props.question.question_text), React.createElement("form", {className: "NWForm:json", method: "post", action: '/questions/' + this.props.question.id + '/submit', "data-nwform-successcb": "onQuestionAnswered"}, React.createElement("ul", {className: "list-style-none"}, answers), React.createElement("button", {type: "submit", disabled: this.props.question.selected_answer_id ? '' : 'disabled'}, this.props.question.selected_answer_id ? 'Submit (only if you\'re super sure)' : 'Choose Wisely!'))));
         };
         return Question;
     }(React.Component));
@@ -218,7 +229,6 @@ define("app/QuestionController", ["require", "exports", "novumware", "app/Questi
                 url: '/questions/' + this.props.question_id,
                 onSuccess: function (response) { _this.questionStore.question = response.question; }
             });
-            $nw.initContainer(ReactDOM.findDOMNode(this));
         };
         QuestionController.prototype.componentWillUnmount = function () {
             this.questionStore.unbind('change', this.onQuestionStoreChange.bind(this));
@@ -227,8 +237,13 @@ define("app/QuestionController", ["require", "exports", "novumware", "app/Questi
             console.log('QuestionController.onQuestionStoreChange');
             this.setState({ question: this.questionStore.question });
         };
+        QuestionController.prototype.handleSubmitSuccess = function () {
+            console.log('QuestionController.handleSubmitSuccess');
+            if (this.props.submitSuccessAction)
+                this.props.submitSuccessAction(this.state.question);
+        };
         QuestionController.prototype.render = function () {
-            return (React.createElement("div", null, React.createElement("h1", null, "Stop!  Answer me this question..."), React.createElement(Question_1.Question, {question: this.state.question})));
+            return (React.createElement("div", null, React.createElement("h1", null, "Stop!  Answer me this question..."), React.createElement(Question_1.Question, {question: this.state.question, submitSuccessAction: this.handleSubmitSuccess.bind(this)})));
         };
         return QuestionController;
     }(React.Component));
@@ -260,7 +275,54 @@ define("app/QuestionController", ["require", "exports", "novumware", "app/Questi
         return QuestionStore;
     }(NovumWare.AbstractStore));
 });
-define("app/SubmissionStatsController", ["require", "exports", "novumware", "app/Question"], function (require, exports, NovumWare, Question_3) {
+define("app/SubmissionStats", ["require", "exports", "novumware"], function (require, exports, NovumWare) {
+    "use strict";
+    var SubmissionStats = (function (_super) {
+        __extends(SubmissionStats, _super);
+        function SubmissionStats() {
+            _super.apply(this, arguments);
+        }
+        SubmissionStats.prototype.render = function () {
+            var _this = this;
+            var totalSubmissionCount = 0;
+            for (var _i = 0, _a = this.props.submissionStats; _i < _a.length; _i++) {
+                var submissionStat = _a[_i];
+                totalSubmissionCount += submissionStat.count;
+            }
+            var submissionStatRows = this.props.submissionStats.map(function (submissionStat) {
+                var isCorrectRow = (submissionStat.answer_id == _this.props.question.correct_answer_id);
+                var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
+                return (React.createElement("li", {key: submissionStat.id, className: ((isCorrectRow) ? 'positive' : 'negative') + ' borderless'}, React.createElement("strong", null, "(", submissionStat.count, ") "), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, React.createElement("i", {className: ((isCorrectRow) ? 'icon-checkmark' : 'icon-cancel') + ' no-float'}), " ", submissionStat.answer_text)));
+            });
+            return (React.createElement("ul", {className: "submissionStats list-style-none"}, submissionStatRows));
+        };
+        return SubmissionStats;
+    }(React.Component));
+    exports.SubmissionStats = SubmissionStats;
+    // =========================================== Submission Stat Model ==========================================
+    var SubmissionStatModel = (function (_super) {
+        __extends(SubmissionStatModel, _super);
+        function SubmissionStatModel(data) {
+            _super.call(this);
+            if (data)
+                this.updateData(data);
+        }
+        SubmissionStatModel.prototype.updateData = function (data) {
+            if (data.id)
+                this.id = Number(data.id);
+            if (data.answer_id)
+                this.answer_id = Number(data.answer_id);
+            if (data.answer_text)
+                this.answer_text = data.answer_text;
+            if (data.count)
+                this.count = Number(data.count);
+            _super.prototype.updateData.call(this, data);
+        };
+        return SubmissionStatModel;
+    }(NovumWare.AbstractModel));
+    exports.SubmissionStatModel = SubmissionStatModel;
+});
+define("app/SubmissionStatsController", ["require", "exports", "novumware", "app/Question", "app/SubmissionStats", "app/SubmissionStats"], function (require, exports, NovumWare, Question_3, SubmissionStats_1, SubmissionStats_2) {
     "use strict";
     var SubmissionStatsController = (function (_super) {
         __extends(SubmissionStatsController, _super);
@@ -297,42 +359,11 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
             });
         };
         SubmissionStatsController.prototype.render = function () {
-            var totalSubmissionCount = 0;
-            for (var _i = 0, _a = this.state.submissionStats; _i < _a.length; _i++) {
-                var submissionStat = _a[_i];
-                totalSubmissionCount += submissionStat.count;
-            }
-            var submissionStats = this.state.submissionStats.map(function (submissionStat) {
-                var percent = Math.round(submissionStat.count / totalSubmissionCount * 100);
-                return (React.createElement("li", {key: submissionStat.id}, React.createElement("strong", null, "(", submissionStat.count, ")"), React.createElement("div", {className: "fullBar"}, React.createElement("div", {className: "percentBar", style: { width: percent + '%' }}), React.createElement("span", {className: "percentText"}, percent, "%")), React.createElement("span", {className: "answerText"}, submissionStat.answer_text)));
-            });
-            return (React.createElement("div", null, React.createElement("h1", null, "Check Out The Results!"), React.createElement("h2", null, this.state.question.question_text), React.createElement("ul", {className: "submissionStats list-style-none"}, submissionStats)));
+            return (React.createElement("div", null, React.createElement("h1", null, "Check Out The Results!"), React.createElement("h2", null, this.state.question.question_text), React.createElement(SubmissionStats_2.SubmissionStats, {question: this.state.question, submissionStats: this.state.submissionStats})));
         };
         return SubmissionStatsController;
     }(React.Component));
     exports.SubmissionStatsController = SubmissionStatsController;
-    // =========================================== Submission Stat Model ==========================================
-    var SubmissionStatModel = (function (_super) {
-        __extends(SubmissionStatModel, _super);
-        function SubmissionStatModel(data) {
-            _super.call(this);
-            if (data)
-                this.updateData(data);
-        }
-        SubmissionStatModel.prototype.updateData = function (data) {
-            if (data.id)
-                this.id = Number(data.id);
-            if (data.answer_id)
-                this.answer_id = Number(data.answer_id);
-            if (data.answer_text)
-                this.answer_text = data.answer_text;
-            if (data.count)
-                this.count = Number(data.count);
-            _super.prototype.updateData.call(this, data);
-        };
-        return SubmissionStatModel;
-    }(NovumWare.AbstractModel));
-    exports.SubmissionStatModel = SubmissionStatModel;
     // =========================================== SubmissionStats Store ==========================================
     var SubmissionStatsStore = (function (_super) {
         __extends(SubmissionStatsStore, _super);
@@ -367,7 +398,7 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
                 this._submissions = [];
                 for (var _i = 0, submissionStatsData_1 = submissionStatsData; _i < submissionStatsData_1.length; _i++) {
                     var submissionStatData = submissionStatsData_1[_i];
-                    var submissionStat = new SubmissionStatModel(submissionStatData);
+                    var submissionStat = new SubmissionStats_1.SubmissionStatModel(submissionStatData);
                     submissionStat.bind('change', this.onSubmissionStatsChange.bind(this));
                     this._submissions.push(submissionStat);
                 }
@@ -383,41 +414,32 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
         return SubmissionStatsStore;
     }(NovumWare.AbstractStore));
 });
-define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController"], function (require, exports, SubmissionStatsController_1, QuestionController_1) {
+define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController", "app/Question"], function (require, exports, SubmissionStatsController_1, QuestionController_1, Question_4) {
     "use strict";
     var SurveyController = (function (_super) {
         __extends(SurveyController, _super);
         function SurveyController() {
             _super.apply(this, arguments);
-            this.state = {};
+            this.state = {
+                answeredQuestion: new Question_4.QuestionModel({
+                    correct_answer_id: 1,
+                    selected_answer_id: 2
+                })
+            };
         }
-        SurveyController.prototype.componentDidMount = function () {
-            // new NWRequest.JSON({
-            // 	url: this.props.surveyUrl,
-            // 	onSuccess: function(response) {
-            // 		this.surveyStore = response.survey;
-            // 	}.bind(this)
-            // });
+        SurveyController.prototype.handleQuestionSubmitSuccess = function (question) {
+            console.log('SurveyController.handleQuestionSubmitSuccess');
+            this.setState({
+                answeredQuestion: question
+            });
         };
         SurveyController.prototype.render = function () {
             var submissionStatsController = React.createElement(SubmissionStatsController_1.SubmissionStatsController, {question_id: this.props.question_id});
-            var questionController = React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id});
-            return (React.createElement("div", null, questionController));
+            var questionController = React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id, submitSuccessAction: this.handleQuestionSubmitSuccess.bind(this)});
+            var displayedPage = (this.state.answeredQuestion) ? submissionStatsController : questionController;
+            return (React.createElement("div", null, displayedPage));
         };
         return SurveyController;
     }(React.Component));
     exports.SurveyController = SurveyController;
 });
-// =========================================== Survey Store ==========================================
-// class SurveyStore extends NovumWare.AbstractStore {
-// 	private _survey: SurveyModel = new SurveyModel();
-// 	get survey() { return this._survey; }
-// 	set survey(survey:SurveyModel) {
-// 		this._survey = survey;
-// 		this.trigger('change');
-// 	}
-// 	onSurveyChange() {
-// 		console.log('SurveyStore.onSurveyChange');
-// 		this.trigger('change');
-// 	}
-// }

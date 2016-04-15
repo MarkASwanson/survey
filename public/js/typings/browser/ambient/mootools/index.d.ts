@@ -3,4 +3,5 @@
 
 declare interface Element {
 	addEvent(eventName: string, callback: () => any): void;
+	getElement(selecter:string): HTMLElement;
 }
