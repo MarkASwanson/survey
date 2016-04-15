@@ -25,7 +25,7 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 			var selectedAnswerElmt = <span className="selectedAnswerText">{(isCorrectRow)?'Well done!':'Bummer...'} You answered <i className="icon-chevron-right no-float"></i> </span>;
 
 			return (
-				<li key={submissionStat.id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
+				<li key={submissionStat.answer_id} className={((isCorrectRow)?'positive':'negative')+' borderless'}>
 					{(isSelectedAnswer) ? selectedAnswerElmt : ''}
 					<span className="count">({submissionStat.count}) </span>
 					<div className="fullBar">
@@ -48,7 +48,6 @@ export class SubmissionStats extends React.Component<ISubmissionStatsProps, ISub
 
 // =========================================== Submission Stat Model ==========================================
 export class SubmissionStatModel extends NovumWare.AbstractModel {
-	id: number;
 	answer_id: number;
 	answer_text: string;
 	answer_order: number;
