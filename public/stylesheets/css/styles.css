@@ -3377,7 +3377,9 @@ ul.nav.nav-auth {
       margin-top: 15px; }
   /* line 54, ../scss/styles.scss */
   #survey .selectedAnswerText.alert {
-    padding: 5px; }
+    padding: 5px;
+    padding-left: 10px;
+    text-align: left; }
   @media (min-width: 760px) {
     /* line 53, ../scss/styles.scss */
     #survey .selectedAnswerText {
@@ -3386,19 +3388,19 @@ ul.nav.nav-auth {
       left: -230px;
       text-align: right;
       padding-right: 5px; } }
-  /* line 67, ../scss/styles.scss */
+  /* line 69, ../scss/styles.scss */
   #survey .submissionStats {
     display: inline-block;
     text-align: left; }
-    /* line 71, ../scss/styles.scss */
+    /* line 73, ../scss/styles.scss */
     #survey .submissionStats li {
       white-space: nowrap; }
-    /* line 75, ../scss/styles.scss */
+    /* line 77, ../scss/styles.scss */
     #survey .submissionStats .count {
       width: 30px;
       display: inline-block;
       text-align: right; }
-    /* line 81, ../scss/styles.scss */
+    /* line 83, ../scss/styles.scss */
     #survey .submissionStats .fullBar {
       background-color: #CECBD2;
       width: 150px;
@@ -3411,14 +3413,14 @@ ul.nav.nav-auth {
       margin: 0px 5px;
       position: relative;
       text-align: center; }
-    /* line 95, ../scss/styles.scss */
+    /* line 97, ../scss/styles.scss */
     #survey .submissionStats .percentBar {
       background-color: #F4BB5F;
       position: absolute;
       left: 0px;
       top: 0px;
       bottom: 0px; }
-    /* line 103, ../scss/styles.scss */
+    /* line 105, ../scss/styles.scss */
     #survey .submissionStats .percentText {
       font-size: 0.8em;
       margin-bottom: 3px;

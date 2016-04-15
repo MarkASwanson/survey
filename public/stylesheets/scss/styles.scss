@@ -52,9 +52,11 @@ ul.nav.nav-auth {
 
 	.selectedAnswerText {
 		&.alert {
-			padding:	$padding-small;
+			padding:		$padding-small;
+			padding-left:	$padding;
+			text-align:	left;
 		}
-		
+
 		@include	tablet-andLarger {
 			position:		absolute;
 			width:			210px;
