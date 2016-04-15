@@ -8,7 +8,8 @@ declare var NWRequest;
 // =========================================== Question Controller ==========================================
 interface IQuestionControllerProps {
 	question_id: number;
-	submitSuccessAction?: (question:QuestionModel) => void;
+	submitSuccessAction?: (question:QuestionModel)=>void;
+	seeSubmissionStatsAction?: ()=>void;
 }
 
 interface IQuestionControllerState {
@@ -43,11 +44,17 @@ export class QuestionController extends React.Component<IQuestionControllerProps
 		if (this.props.submitSuccessAction) this.props.submitSuccessAction(this.state.question);
 	}
 
+	handleSeeSubmissionStats() {
+		console.log('QuestionController.handleSeeSubmissionStats');
+		this.props.seeSubmissionStatsAction();
+	}
+
 	render() {
 		return (
 			<div>
-				<h1>Stop!  Answer me this question...</h1>	   
+				<h1>Stop!  Answer me this question...</h1>
 				<Question question={this.state.question} submitSuccessAction={this.handleSubmitSuccess.bind(this)} />
+				<br /><a onClick={this.handleSeeSubmissionStats.bind(this)}>Let me see the answer (cheater...)</a>
 	        </div>
         )
 	}

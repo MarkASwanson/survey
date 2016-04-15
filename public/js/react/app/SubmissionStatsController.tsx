@@ -10,6 +10,7 @@ declare var NWRequest;
 interface ISubmissionStatsControllerProps {
 	question_id: number;
 	question?: QuestionModel;
+	tryAgainAction?: ()=>void;
 }
 
 interface ISubmissionStatsControllerState {
@@ -56,14 +57,20 @@ export class SubmissionStatsController extends React.Component<ISubmissionStatsC
 		});
 	}
 
+	handleTryAgain() {
+		console.log('SubmissionStatsController.handleTrayAgain');
+		this.props.tryAgainAction();
+	}
+
 	render() {
 		return (
 			<div>
-				<h1>Check Out The Results!</h1>
+				<h1>All The Previous Answers!</h1>
 				<section className="panel">  
 					<h1>{this.state.question.question_text}</h1>
 					<SubmissionStats question={this.state.question} submissionStats={this.state.submissionStats} />
 				</section>
+				<br /><a onClick={this.handleTryAgain.bind(this)}>Try again (don't give up!)</a>
 	        </div>
         )
 	}

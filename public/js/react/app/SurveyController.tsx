@@ -29,13 +29,27 @@ export class SurveyController extends React.Component<ISurveyControllerProps, IS
 		console.log('SurveyController.handleQuestionSubmitSuccess');
 		this.setState({
 			answeredQuestion: question
-		})
+		});
+	}
+
+	handleSeeSubmissionStats() {
+		console.log('SurveyController.handleSeeSubmissionStats');
+		this.setState({
+			answeredQuestion: new QuestionModel()
+		});
+	}
+
+	handleTryAgain() {
+		console.log('SurveyController.handleTryAgain');
+		this.setState({
+			answeredQuestion: null
+		});
 	}
 
 	render() {
 		var displayedPage = (this.state.answeredQuestion) ?
-			<SubmissionStatsController question={this.state.answeredQuestion} question_id={this.state.answeredQuestion.id || this.props.question_id} /> :
-			<QuestionController question_id={this.props.question_id} submitSuccessAction={this.handleQuestionSubmitSuccess.bind(this) } />;
+			<SubmissionStatsController question={this.state.answeredQuestion} question_id={this.state.answeredQuestion.id || this.props.question_id} tryAgainAction={this.handleTryAgain.bind(this)} /> :
+			<QuestionController question_id={this.props.question_id} submitSuccessAction={this.handleQuestionSubmitSuccess.bind(this)} seeSubmissionStatsAction={this.handleSeeSubmissionStats.bind(this)} />;
 
 		return (
 	        <div>

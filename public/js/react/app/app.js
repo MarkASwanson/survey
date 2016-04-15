@@ -246,8 +246,12 @@ define("app/QuestionController", ["require", "exports", "novumware", "app/Questi
             if (this.props.submitSuccessAction)
                 this.props.submitSuccessAction(this.state.question);
         };
+        QuestionController.prototype.handleSeeSubmissionStats = function () {
+            console.log('QuestionController.handleSeeSubmissionStats');
+            this.props.seeSubmissionStatsAction();
+        };
         QuestionController.prototype.render = function () {
-            return (React.createElement("div", null, React.createElement("h1", null, "Stop!  Answer me this question..."), React.createElement(Question_1.Question, {question: this.state.question, submitSuccessAction: this.handleSubmitSuccess.bind(this)})));
+            return (React.createElement("div", null, React.createElement("h1", null, "Stop!  Answer me this question..."), React.createElement(Question_1.Question, {question: this.state.question, submitSuccessAction: this.handleSubmitSuccess.bind(this)}), React.createElement("br", null), React.createElement("a", {onClick: this.handleSeeSubmissionStats.bind(this)}, "Let me see the answer (cheater...)")));
         };
         return QuestionController;
     }(React.Component));
@@ -372,8 +376,12 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
                 submissionStats: this.submissionStatsStore.submissionStats
             });
         };
+        SubmissionStatsController.prototype.handleTryAgain = function () {
+            console.log('SubmissionStatsController.handleTrayAgain');
+            this.props.tryAgainAction();
+        };
         SubmissionStatsController.prototype.render = function () {
-            return (React.createElement("div", null, React.createElement("h1", null, "Check Out The Results!"), React.createElement("section", {className: "panel"}, React.createElement("h1", null, this.state.question.question_text), React.createElement(SubmissionStats_2.SubmissionStats, {question: this.state.question, submissionStats: this.state.submissionStats}))));
+            return (React.createElement("div", null, React.createElement("h1", null, "All The Previous Answers!"), React.createElement("section", {className: "panel"}, React.createElement("h1", null, this.state.question.question_text), React.createElement(SubmissionStats_2.SubmissionStats, {question: this.state.question, submissionStats: this.state.submissionStats})), React.createElement("br", null), React.createElement("a", {onClick: this.handleTryAgain.bind(this)}, "Try again (don't give up!)")));
         };
         return SubmissionStatsController;
     }(React.Component));
@@ -429,7 +437,7 @@ define("app/SubmissionStatsController", ["require", "exports", "novumware", "app
         return SubmissionStatsStore;
     }(NovumWare.AbstractStore));
 });
-define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController"], function (require, exports, SubmissionStatsController_1, QuestionController_1) {
+define("app/SurveyController", ["require", "exports", "app/SubmissionStatsController", "app/QuestionController", "app/Question"], function (require, exports, SubmissionStatsController_1, QuestionController_1, Question_4) {
     "use strict";
     var SurveyController = (function (_super) {
         __extends(SurveyController, _super);
@@ -443,10 +451,22 @@ define("app/SurveyController", ["require", "exports", "app/SubmissionStatsContro
                 answeredQuestion: question
             });
         };
+        SurveyController.prototype.handleSeeSubmissionStats = function () {
+            console.log('SurveyController.handleSeeSubmissionStats');
+            this.setState({
+                answeredQuestion: new Question_4.QuestionModel()
+            });
+        };
+        SurveyController.prototype.handleTryAgain = function () {
+            console.log('SurveyController.handleTryAgain');
+            this.setState({
+                answeredQuestion: null
+            });
+        };
         SurveyController.prototype.render = function () {
             var displayedPage = (this.state.answeredQuestion) ?
-                React.createElement(SubmissionStatsController_1.SubmissionStatsController, {question: this.state.answeredQuestion, question_id: this.state.answeredQuestion.id || this.props.question_id}) :
-                React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id, submitSuccessAction: this.handleQuestionSubmitSuccess.bind(this)});
+                React.createElement(SubmissionStatsController_1.SubmissionStatsController, {question: this.state.answeredQuestion, question_id: this.state.answeredQuestion.id || this.props.question_id, tryAgainAction: this.handleTryAgain.bind(this)}) :
+                React.createElement(QuestionController_1.QuestionController, {question_id: this.props.question_id, submitSuccessAction: this.handleQuestionSubmitSuccess.bind(this), seeSubmissionStatsAction: this.handleSeeSubmissionStats.bind(this)});
             return (React.createElement("div", null, displayedPage));
         };
         return SurveyController;
