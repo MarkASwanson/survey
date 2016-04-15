@@ -3424,7 +3424,7 @@ ul.nav.nav-auth {
     @media (max-width: 759px) {
       /* line 97, ../scss/styles.scss */
       .submissionStats .selectedAnswerText {
-        left: -200px; }
+        left: -205px; }
         /* line 107, ../scss/styles.scss */
         .submissionStats .selectedAnswerText .text {
           display: none; } }
